@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FBDC3F</color>
+    <color name="colorPrimaryDark">#A03F42</color>
+    <color name="colorAccent">#414291</color>
+    <color name="actionBarTextColor">#414291</color>
+    <color name="categoryFurniture">#FFFDE7</color>
+    <color name="categoryMHS">#FFF176</color>
+    <color name="colorDeccanBlue">#414291</color>
+</resources>
