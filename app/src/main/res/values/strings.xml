@@ -106,59 +106,48 @@
     <string name="jcsw_capacity">75 Litres</string>
 
     <string name="mp21_features">Stackable Utility crates with sides closed. Multipurpose solid crate for fishery, industrial and retail business, processed foods storing and transporting.</string>
-    <string name="mp21_dimensions"></string>
-    <string name ="mp21_recommendations"></string>.
-    <string name ="mp21_capacity"></string>
+    <string name="mp21_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
+    <string name="mp21_capacity">55 Litres</string>
 
-    <string name="mp22_features"></string>
-    <string name="mp22_dimensions"></string>
-    <string name ="mp22_recommendations"></string>.
-    <string name ="mp22_capacity"></string>
+    <string name="mp22_features">Stackable Utility crates with side jaali. Multipurpose jali crate for flowers, bananas, grocery, processed foods storing and transporting.</string>
+    <string name="mp22_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
+    <string name="mp22_capacity">55 Litres</string>
 
-    <string name="mp01_features"></string>
-    <string name="mp01_dimensions"></string>
-    <string name ="mp01_recommendations"></string>.
-    <string name ="mp01_capacity"></string>
+    <string name="mp01_features">Multipurpose jaali crate for veg, fruits, processed foods storing and transporting.</string>
+    <string name="mp01_dimensions">(L) 540 mm, (H) 365 mm, (W) 290 mm</string>
+    <string name="mp01_capacity">45 Litres</string>
 
-    <string name="mp11_features"></string>
-    <string name="mp11_dimensions"></string>
-    <string name ="mp11_recommendations"></string>.
-    <string name ="mp11_capacity"></string>
+    <string name="mp11_features">Multipurpose jaali crate for tomato, flowers, storing and transporting.</string>
+    <string name="mp11_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
+    <string name="mp11_capacity">30 Litres</string>
 
-    <string name="mp12_features"></string>
-    <string name="mp12_dimensions"></string>
-    <string name ="mp12_recommendations"></string>.
-    <string name ="mp12_capacity"></string>
+    <string name="mp12_features">Multipurpose jaali crate for tomato, grapes, flowers storing and transporting.</string>
+    <string name="mp12_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
+    <string name="mp12_capacity">28 Litres</string>
 
-    <string name="bc01_features"></string>
-    <string name="bc01_dimensions"></string>
-    <string name="bc01_recommendations"></string>.
-    <string name="bc01_capacity"></string>
+    <string name="bc01_features">Stackable Crates for soda and cold beverage industry for storing and transport. Ideal for branding product logo.</string>
+    <string name="bc01_dimensions">(L) 420 mm, (H) 140 mm, (W) 200 mm</string>
+    <string name="bc01_capacity">Bottle Type: 200 ml to 300 ml, Pocket Size: 62mm x 24 Nos</string>
 
-    <string name="sindhushree_25_features"></string>
-    <string name="sindhushree_25_dimensions"></string>
-    <string name="sindhushree_25_recommendations"></string>.
-    <string name="sindhushree_25_capacity"></string>
+    <string name="sindhushree_25_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_25_dimensions">ϕ 640mm, (H) 400mm</string>
+    <string name="sindhushree_25_capacity">N.A</string>
 
 
-    <string name="sindhushree_21_features"></string>
-    <string name="sindhushree_21_dimensions"></string>
-    <string name="sindhushree_21_recommendations"></string>.
-    <string name="sindhushree_21_capacity"></string>
+    <string name="sindhushree_21_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_21_dimensions">ϕ 540mm, (H) 230mm</string>
+    <string name="sindhushree_21_capacity">N.A</string>
 
-    <string name="sindhushree_18_features"></string>
-    <string name="sindhushree_18_dimensions"></string>
-    <string name="sindhushree_18_recommendations"></string>.
-    <string name="sindhushree_18_capacity"></string>
+    <string name="sindhushree_18_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_18_dimensions">ϕ 470mm, (H) 215mm</string>
+    <string name="sindhushree_18_capacity">N.A</string>
 
-    <string name="jayashree_features"></string>
-    <string name="jayashree_dimensions"></string>
-    <string name="jayashree_recommendations"></string>.
-    <string name="jayashree_capacity"></string>
+    <string name="jayashree_features">Unbreakable butti with molded handles. For agriculture produce and construction sites for sand and concrete.</string>
+    <string name="jayashree_dimensions">(ϕ) 530mm, (H) 165mm</string>
+    <string name="jayashree_capacity">N.A</string>
 
-    <string name="buckets_features"></string>
-    <string name="buckets_dimensions"></string>
-    <string name="buckets_recommendations"></string>.
-    <string name="buckets_capacity"></string>
+    <string name="buckets_features">Unbreakable 17 LTR bucket with molded handle. Most popular size for households or any hotel or lodge bathroom.</string>
+    <string name="buckets_dimensions">ϕ 335mm, (H) 400mm</string>
+    <string name="buckets_capacity">17 Ltrs</string>
 
 </resources>
