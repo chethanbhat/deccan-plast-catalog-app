@@ -3,6 +3,7 @@ package com.deccanplast.app.deccanplastindustries;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -16,25 +17,25 @@ public class FurnitureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_list);
 
-        final ArrayList<Product> products = new ArrayList<>();
+            final ArrayList<Category> categories = new ArrayList<>();
 
-        // Create a list of words
-        products.add(new Product("premium relax chairs", R.drawable.ferrari));
-        products.add(new Product("premium arm chairs", R.drawable.bently));
-        products.add(new Product("premium high back chairs", R.drawable.porsche));
-        products.add(new Product("premium dining chairs", R.drawable.hexa));
-        products.add(new Product("mid back arm chairs", R.drawable.brio));
-        products.add(new Product("high back dining chairs", R.drawable.figo));
-        products.add(new Product("armless chairs", R.drawable.nano));
-        products.add(new Product("dining tables", R.drawable.calicut_round_table));
-        products.add(new Product("center tables", R.drawable.innova));
-        products.add(new Product("multi seating systems", R.drawable.ritz));
-        products.add(new Product("children chairs", R.drawable.gogo_baby_rocker));
-        products.add(new Product("stools", R.drawable.rattan));
+            // Create a list of words
+            categories.add(new Category(101,"premium relax chairs", R.drawable.ferrari));
+            categories.add(new Category(102,"premium arm chairs", R.drawable.bently));
+            categories.add(new Category(103, "premium high back chairs", R.drawable.porsche));
+            categories.add(new Category(104, "premium dining chairs", R.drawable.hexa));
+            categories.add(new Category(105, "mid back arm chairs", R.drawable.brio));
+            categories.add(new Category(106, "high back dining chairs", R.drawable.figo));
+            categories.add(new Category(107, "armless chairs", R.drawable.nano));
+            categories.add(new Category(108, "dining tables", R.drawable.calicut_round_table));
+            categories.add(new Category(109, "center tables", R.drawable.innova));
+            categories.add(new Category(110, "multi seating systems", R.drawable.ritz));
+            categories.add(new Category(114, "stools", R.drawable.rattan));
+            categories.add(new Category(777, "children chairs", R.drawable.gogo_baby_rocker));
 
         // Create an {@link ProductAdapter}, whose data source is a list of {@link Product}s. The
         // adapter knows how to create list items for each item in the list.
-        ProductAdapter adapter = new ProductAdapter(this, products);
+        CategoryAdapter adapter = new CategoryAdapter(this, categories);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -48,92 +49,132 @@ public class FurnitureActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                generateActivity(position);
 
+                Category category = categories.get(position);
+
+                int categoryId = category.getmCategoryCode();
+
+                if(categoryId == 777){
+                    generateCategory();
+                    Log.v("FurnitureActivity","i am in this branch " + categoryId);
+                }else{
+                    generateActivity(categoryId);
+                }
             }
         });
 
     }
 
-    public void generateActivity(int position) {
+    public void generateActivity(int categoryId) {
 
         Class activityClass = FurnitureProductActivity.class;
-        ArrayList<Product> productToPass = new ArrayList<>();
+        ArrayList<Product> productsToPass = new ArrayList<>();
         String activityTitle = "";
 
-        switch (position) {
-            case 0:
-                productToPass.add(new Product("Ferrari", R.drawable.ferrari));
-                productToPass.add(new Product("Lotus", R.drawable.lotus));
+
+
+        switch (categoryId) {
+            case 101:
+                productsToPass.add(new Product(10101,"Ferrari", R.drawable.ferrari));
+                productsToPass.add(new Product(10102,"Lotus", R.drawable.lotus));
                 activityTitle = "Premium Relax Chairs";
                 break;
-            case 1:
-                productToPass.add(new Product("Buggati", R.drawable.buggatti));
-                productToPass.add(new Product("Bently", R.drawable.bently));
+            case 102:
+                productsToPass.add(new Product(10201,"Buggati", R.drawable.buggatti));
+                productsToPass.add(new Product(10202,"Bently", R.drawable.bently));
                 activityTitle = "Premium Arm Chairs";
                 break;
-            case 2:
-                productToPass.add(new Product("Lexus", R.drawable.lexus));
-                productToPass.add(new Product("Porsche", R.drawable.porsche));
-                productToPass.add(new Product("Mercedes", R.drawable.mercedes));
+            case 103:
+                productsToPass.add(new Product(10301, "Lexus", R.drawable.lexus));
+                productsToPass.add(new Product(10302,"Porsche", R.drawable.porsche));
+                productsToPass.add(new Product(10303,"Mercedes", R.drawable.mercedes));
                 activityTitle = "Premium High Back Chairs";
                 break;
-            case 3:
-                productToPass.add(new Product("Brezza", R.drawable.brezza));
-                productToPass.add(new Product("Hexa", R.drawable.hexa));
-                productToPass.add(new Product("Crysta", R.drawable.crysta));
+            case 104:
+                productsToPass.add(new Product(10401,"Brezza", R.drawable.brezza));
+                productsToPass.add(new Product(10402,"Hexa", R.drawable.hexa));
+                productsToPass.add(new Product(10403,"Crysta", R.drawable.crysta));
                 activityTitle = "Premium Dining Chairs";
                 break;
-            case 4:
-                productToPass.add(new Product("Camry", R.drawable.camry));
-                productToPass.add(new Product("Accord", R.drawable.accord));
-                productToPass.add(new Product("Amaze", R.drawable.amaze));
-                productToPass.add(new Product("Eon", R.drawable.eon));
-                productToPass.add(new Product("Brio", R.drawable.brio));
-                productToPass.add(new Product("Up", R.drawable.up_mid));
+            case 105:
+                productsToPass.add(new Product(10501,"Camry", R.drawable.camry));
+                productsToPass.add(new Product(10502,"Accord", R.drawable.accord));
+                productsToPass.add(new Product(10503,"Amaze", R.drawable.amaze));
+                productsToPass.add(new Product(10504,"Eon", R.drawable.eon));
+                productsToPass.add(new Product(10505,"Brio", R.drawable.brio));
+                productsToPass.add(new Product(10506,"Up", R.drawable.up_mid));
                 activityTitle = "Premium Mid Back Chairs";
                 break;
-            case 5:
-                productToPass.add(new Product("Figo", R.drawable.figo));
-                productToPass.add(new Product("Polo", R.drawable.polo));
+            case 106:
+                productsToPass.add(new Product(10601,"Figo", R.drawable.figo));
+                productsToPass.add(new Product(10602,"Polo", R.drawable.polo));
                 activityTitle = "High Back Dining Chairs";
                 break;
-            case 6:
-                productToPass.add(new Product("Nano", R.drawable.nano));
+            case 107:
+                productsToPass.add(new Product(10701,"Nano", R.drawable.nano));
                 activityTitle = "Armless Chairs";
                 break;
-            case 7:
-                productToPass.add(new Product("Mangalore Dining Tables", R.drawable.mangalore_dining_table));
-                productToPass.add(new Product("Calicut Dining Tables", R.drawable.calicut_round_table));
+            case 108:
+                productsToPass.add(new Product(10801,"Mangalore Dining Tables", R.drawable.mangalore_dining_table));
+                productsToPass.add(new Product(10802,"Calicut Dining Tables", R.drawable.calicut_round_table));
                 activityTitle = "Dining Tables";
                 break;
-            case 8:
-                productToPass.add(new Product("Innova", R.drawable.innova));
-                productToPass.add(new Product("Swift", R.drawable.swift));
+            case 109:
+                productsToPass.add(new Product(10901,"Innova", R.drawable.innova));
+                productsToPass.add(new Product(10902,"Swift", R.drawable.swift));
                 activityTitle = "Center Tables";
                 break;
-            case 9:
-                productToPass.add(new Product("Ritz", R.drawable.ritz));
+            case 110:
+                productsToPass.add(new Product(11001,"Ritz", R.drawable.ritz));
                 activityTitle = "Multi Seating Systems";
                 break;
-            case 10:
-                productToPass.add(new Product("Mini Relax Chairs", R.drawable.ferrari_mini));
-                productToPass.add(new Product("Baby Chairs", R.drawable.baby_abcd));
-                productToPass.add(new Product("Rocker Toys", R.drawable.gogo_baby_rocker));
-                activityTitle = "Children Chairs";
+            case 111:
+                productsToPass.add(new Product(11101,"Ferrari Mini", R.drawable.ferrari_mini));
+                productsToPass.add(new Product(11102,"Lotus Mini", R.drawable.lotus_mini));
+                productsToPass.add(new Product(11103,"Noble Mini", R.drawable.noble_mini));
+                activityTitle = "Mini Relax Chairs";
                 break;
-            case 11:
-                productToPass.add(new Product("Ritz", R.drawable.rattan));
-                productToPass.add(new Product("Ritz", R.drawable.pulsar21));
-                productToPass.add(new Product("Ritz", R.drawable.activa));
-                productToPass.add(new Product("Pleasure", R.drawable.pleasure_bath));
+            case 112:
+                productsToPass.add(new Product(11201,"Baby Eon", R.drawable.baby_eon));
+                productsToPass.add(new Product(11202,"Baby ABCD", R.drawable.baby_abcd));
+                productsToPass.add(new Product(11203,"Baby Up", R.drawable.baby_up));
+                activityTitle = "Baby Chairs";
+                break;
+            case 113:
+                productsToPass.add(new Product(11301,"Gogo Rocker Toy", R.drawable.gogo_baby_rocker));
+                activityTitle = "Rocker Toys";
+                break;
+            case 114:
+                productsToPass.add(new Product(11401,"Maestro Rattan", R.drawable.rattan));
+                productsToPass.add(new Product(11402,"Pulsar", R.drawable.pulsar21));
+                productsToPass.add(new Product(11403,"Activa", R.drawable.activa));
+                productsToPass.add(new Product(11404,"Pleasure", R.drawable.pleasure_bath));
                 activityTitle = "Stools";
                 break;
         }
 
         Intent activityIntent = new Intent(getApplicationContext(), activityClass);
-        activityIntent.putExtra("products",productToPass);
+        activityIntent.putExtra("products",productsToPass);
         activityIntent.putExtra("activityTitle",activityTitle);
         startActivity(activityIntent);
     }
+
+    public void generateCategory(){
+        ArrayList<Category> categoryChildren = new ArrayList<>();
+        Class activityClass = ChildrenChairs.class;
+        String activityTitle;
+
+        categoryChildren.add(new Category(111,"Mini Chairs", R.drawable.ferrari_mini));
+        categoryChildren.add(new Category(112,"Baby Chairs", R.drawable.baby_abcd));
+        categoryChildren.add(new Category(113,"Rocker Toys", R.drawable.gogo_baby_rocker));
+        activityTitle = "Children Chairs";
+
+        Intent activityIntent = new Intent(getApplicationContext(), activityClass);
+        activityIntent.putExtra("categories",categoryChildren);
+        activityIntent.putExtra("activityTitle",activityTitle);
+        startActivity(activityIntent);
+
+    }
+
+
 }

@@ -11,19 +11,18 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by chethan on 14/7/17.
+ * Created by chethan on 17/7/17.
  */
 
-public class ProductAdapter extends ArrayAdapter<Product> {
-
+public class CategoryAdapter extends ArrayAdapter<Category> {
     /**
-     * Create a new {@link ProductAdapter} object.
+     * Create a new {@link CategoryAdapter} object.
      *
      * @param context is the current context (i.e. Activity) that the adapter is being created in.
-     * @param products is the list of {@link Product}s to be displayed.
+     * @param categories is the list of {@link Category}s to be displayed.
      */
-    public ProductAdapter(Context context, ArrayList<Product> products) {
-        super(context, 0, products);
+    public CategoryAdapter(Context context, ArrayList<Category> categories) {
+        super(context, 0, categories);
     }
 
     /**
@@ -46,23 +45,23 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         }
 
         // Get the {@link Product} object located at this position in the list
-        Product currentProduct = getItem(position);
+        Category currentCategory = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
-        TextView productName = listItemView.findViewById(R.id.list_item_name);
+        TextView categoryName = (TextView) listItemView.findViewById(R.id.list_item_name);
         // Get the Product Name from the current Product object and set this text on
         // the product_name TextView.
 
-        productName.setText(currentProduct.getmProductName());
+        categoryName.setText(currentCategory.getmCategoryName());
 
 
         // Find the ImageView in the list_item.xml layout with the ID image.
-        ImageView productImage = listItemView.findViewById(R.id.list_item_image);
+        ImageView categoryImage = (ImageView) listItemView.findViewById(R.id.list_item_image);
 
         // Get the Product Image Id from current Product object and set the image on
         // the product_image ImageView.
 
-        productImage.setImageResource(currentProduct.getmProductImageId());
+        categoryImage.setImageResource(currentCategory.getmCategoryImageId());
 
         // Return the whole list item layout (containing 2 TextViews) so that it can be shown in
         // the ListView.

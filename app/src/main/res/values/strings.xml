@@ -2,5 +2,163 @@
     <string name="app_name">Deccan Plast Industries</string>
     <string name="furniture_solutions">Furniture Solutions</string>
     <string name="mhs_solution">Material Handling Solutions</string>
-    <string name="premium_relax_chairs">Premium Relax Chairs</string>
+
+    <string name="premium_relax_chairs_features">\u25CF Ergonomic \n\u25CF Extremely Comfortable Design \n\u25CF Higher seat height \n\u25CF Excellent support for lumber and neck \n\u25CF Ideal for leisure seating</string>
+    <string name="premium_relax_chairs_dimensions">(H) 936 mm, (W) 615 mm, (D) 740 mm</string>
+    <string name="premium_relax_chairs_recommendations">Recommended for Households, resorts, hotels, collage/school teaching staff and student common rooms, waiting areas in hospitals, travel companies</string>
+    <string name="premium_relax_chairs_colors">DBR, DBL, TCO</string>
+
+    <string name="premium_arm_chairs_features">\u25CF Beautiful designs in wooden finish \n\u25CF Contoured seat for extended use \n\u25CF Highly Sturdy \n\u25CF Strong Chairs \n\u25CF Suited for special locations and comfort seating</string>
+    <string name="premium_arm_chairs_dimensions">(H) 825 mm, (W) 585 mm, (D) 650 mm</string>
+    <string name="premium_arm_chairs_recommendations">Recommended for Households, restaurants, resorts, hotels, collage/school class rooms, visitor chairs, office chairs and any formal seating, a replacement of wooden chairs</string>
+    <string name="premium_arm_chairs_colors">RWD, PWD, MWD, MHG, RED, YEL, WHT</string>
+
+    <string name="premium_high_back_chairs_features">\u25CF High Back Luxury Chairs \n\u25CF Wooden Texture \n\u25CF Broad and High arm rest \n\u25CF Excellent ergonomics, classic back design \n\u25CF Suitable for all formal seating needs \n\u25CF Ideal for visitor chairs</string>
+    <string name="premium_high_back_chairs_dimensions">(H) 895 mm, (W) 590 mm, (D) 650 mm</string>
+    <string name="premium_high_back_chairs_recommendations">Recommended for households, resorts, hotels, college/school class rooms, conference chairs, visitor seating, office chair replacement for wooden or steel type chair.</string>
+    <string name="premium_high_back_chairs_colors">TRWD, PWD, MWD, MHG, RED, MBG, ORG, PGN, PBL, WHT</string>
+
+    <string name="premium_dining_chairs_features">\u25CF Bigger seat with more depth \n\u25CF Strong, Sturdy and Bigger than any competitor products \n\u25CF Ideal Banquet Chairs</string>
+    <string name="premium_dining_chairs_dimensions">(H) 865 mm, (W) 415 mm, (D) 470 mm</string>
+    <string name="premium_dining_chairs_recommendations">Recommended for homes, restaurants, dining halls, banquet rooms, marriage halls, etc</string>
+    <string name="premium_dining_chairs_colors">TRWD, PWD, MWD, MHG, RED, MBG, ORG, PGN, PBL, WHT</string>
+
+    <string name="midback_arm_chairs_features">\u25CF Strong and Sturdy \n\u25CF Multipurpose Everyday usage \n\u25CF Easy to stack and transport</string>
+    <string name="midback_arm_chairs_dimensions_a">(H) 790 mm, (W) 585 mm, (D) 580 mm</string>
+    <string name="midback_arm_chairs_dimensions_b">(H) 785 mm, (W) 550 mm, (D) 585 mm</string>
+    <string name="midback_arm_chairs_recommendations">Recommended for homes, restaurants, dhabas, tent houses, marriage halls or renting business, etc</string>
+    <string name="hexa_colors">YEL, CGN, CPK, ORG, RED</string>
+    <string name="crysta_colors">YEL, CGN, CPK, ORG, RED</string>
+    <string name="brezza_colors">YEL, CGN, CPK, ORG, RED</string>
+
+
+    <string name="high_back_dining_chairs_features">\u25CF Attractive and Ideal banquet chairs \n\u25CF Suitable for any occasion and function \n\u25CF Easy to stack and transport</string>
+    <string name="high_back_dining_chairs_dimensions">(H) 890 mm, (W) 470 mm, (D) 450 mm</string>
+    <string name="high_back_dining_chairs_recommendations">Recommended for homes, restaurants, dining halls dhabas, banquet rooms, marriage halls, etc.</string>
+    <string name="high_back_dining_chairs_colors">RWD, PWD, MWD, MHG, RED, MBG, ORG, PGN, PBL, WHT</string>
+
+    <string name="armless_chairs_features">\u25CF Compact and Strong \n\u25CF Suitable for hire business, homes, restaurants. \n\u25CF Easy to stack and transport</string>
+    <string name="armless_chairs_dimensions">(H) 785 mm, (W) 425 mm, (D) 430 mm</string>
+    <string name="armless_chairs_recommendations">Nano armless chairs are ideal for chair renting business, in school, collage libraries, kids bed rooms in homes, as study chairs.</string>
+    <string name="armless_chairs_colors">RED, ORG, PGN, PBL, WHT</string>
+
+    <string name="dining_table_features">\u25CF Sturdy and Strong \n\u25CF Suitable for seating 4 people \n\u25CF Can be packed in a box</string>
+    <string name="dining_table_dimensions">(H) 1150 mm, (W) 725 mm, (D) 725 mm</string>
+    <string name="dining_table_recommendations">Our Dining tables are a must for restaurants and road side fast food joints and dhabas, besides lawns of elite homes.</string>
+    <string name="dining_table_colors">RWD, PWD, MWD, MHG, MBG, RED, WHT</string>
+
+    <string name="innova_table_features">\u25CF Sturdy and Strong \n\u25CF Shelf for storage \n\u25CF Compact and Attractive Design \n\u25CF Can be packed in a box</string>
+    <string name="innova_table_dimensions">(H) 815 mm, (W) 465 mm, (D) 445 mm</string>
+    <string name="innova_table_recommendations">Innova multipurpose tables are ideal as coffee tables with beautiful design. They are must for any house or commercial place. There is a provision of neat shelf for storing items such as newspapers.</string>
+    <string name="innova_table_colors">RWD, PWD, MWD, MHG, MBG</string>
+
+    <string name="swift_table_features">\u25CF Sturdy and Strong \n\u25CF Multi Utility Wheels \n\u25CF Shelf for storage \n\u25CF Compact and Attractive Design \n\u25CF Can be packed in a box</string>
+    <string name="swift_table_dimensions">(H) 775 mm, (W) 425 mm, (D) 480 mm</string>
+    <string name="swift_table_recommendations">Swift center tables are ideal as tea tables with useful wheels. They are multi-utility due to wheels. They can fit any ambience. They have enough storage space.</string>
+    <string name="swift_table_colors">RWD, PWD, MWD, MHG, RED, MBG, ORG, PGN, PBL, WHT,</string>
+
+    <string name="multi_seating_features">\u25CF Versatile Modular Seating \n\u25CF Multi-purpose Applications \n\u25CF Available in attractive colors</string>
+    <string name="multi_seating_dimensions">(H) 375 mm, (W) 425 mm, (D) 430 mm</string>
+    <string name="multi_seating_recommendations">Ritz Mass seating system are versatile and modular with multiple applications ike single seater, office models, conference chairs for offices, multiseater for waiting areas, student study chair models for schools, collages, coaching classes, libraries etc.</string>
+    <string name="multi_seating_colors">RED, YEL, ORG, CBL, WBR, BLK</string>
+
+    <string name="mini_relax_chairs_features">\u25CF Cute Designs \n\u25CF Attractive Colors \n\u25CF Suitable for Kids from 2 to 10 years</string>
+    <string name="mini_relax_chairs_dimensions">(H) 505 mm, (W) 360 mm, (D) 385 mm</string>
+    <string name="mini_relax_chairs_recommendations">Big mini chairs are for kids of age group 2 to 10 years available in attractive colors. Ideal for kindergartens, anganwadis, day cares nursery, preprimary and primary schools.</string>
+    <string name="mini_relax_chairs_colors">NBL, PGN, ORG, RED, CPNK</string>
+
+    <string name="baby_chairs_features">\u25CF Cute Designs \n\u25CF Attractive Colors \n\u25CF Suitable for Kids from 2 to 10 years</string>
+    <string name="baby_chairs_dimensions">(H) 505 mm, (W) 360 mm, (D) 385 mm</string>
+    <string name="baby_chairs_recommendations">Very cute designs are available in attractive colors for kids from age group 2 to 10 years. Recommended for kindergartens, anganwadis, nursery, preprimary and primary.</string>
+    <string name="baby_chairs_colors">NBL, PGN, ORG, RED, CPNK</string>
+
+    <string name="rocker_toy_features">\u25CF Cute Designs \n\u25CF Attractive Colors \n\u25CF Suitable for Kids from 2 to 10 years</string>
+    <string name="rocker_toy_dimensions">(H) 480 mm, (W) 325 mm, (D) 570 mm</string>
+    <string name="rocker_toy_recommendations">Rocker Toys are available in attractive color combos for kids of age group 1 to 5 years. Ideal as birthday gift. Recommended for kindergartens and day-care and anganwadis.</string>
+    <string name="rocker_toy_colors">YEL, BLU</string>
+
+    <string name="pulsar_stool_features">\u25CF Multipurpose \n\u25CF Aesthetic design \n\u25CF Surface Texture on Top \n\u25CF Comfortable leg rest \n\u25CF Good Ventilation</string>
+    <string name="pulsar_stool_dimensions">(H) 480 mm, Top - (L) 300 mm, (W) 300 mm</string>
+    <string name="pulsar_stool_recommendations">Pulsar is a Multipurpose rectangular stool of 21 inch height with great top design and leg rest. This 21 inch stool is good for craftsmen, where height is crucial of seat. The seat of Pulsar is nicely designed with very good ventilation</string>
+    <string name="pulsar_stool_colors">RED, YEL, ORG, CBL, CPK, CGN</string>
+
+    <string name="rattan_stool_features">\u25CF Multipurpose \n\u25CF Aesthetic design \n\u25CF Surface Texture on Top \n\u25CF Comfortable leg rest \n\u25CF Good Ventilation</string>
+    <string name="rattan_stool_dimensions">(H) 480 mm, Top: (L) 300 mm, (W) 300 mm</string>
+    <string name="rattan_stool_recommendations">This premium stool is good for any important locations. The surface texture nicely designed to give feeling of luxury and class</string>
+    <string name="rattan_stool_colors">MBG, RED, YEL, ORG, CBL, WBR, DBL, TCO</string>
+
+    <string name="activa_stool_features">\u25CF Multipurpose \n\u25CF Aesthetic design \n\u25CF Surface Texture on Top \n\u25CF Comfortable leg rest \n\u25CF Good Ventilation</string>
+    <string name="activa_stool_dimensions">(H) 435 mm, Top (Dia) 430 mm</string>
+    <string name="activa_stool_recommendations">Activa is a Multipurpose round stool with side support ribs for extra strength. It can replace chair for small budget. Provides good Value For Money.</string>
+    <string name="activa_stool_colors">MBG, RED, YEL, ORG, CBL, WBR, DBL, TCO</string>
+
+    <string name="pleasure_stool_features">\u25CF Multipurpose \n\u25CF Aesthetic design \n\u25CF Surface Texture on Top \n\u25CF Comfortable leg rest \n\u25CF Good Ventilation</string>
+    <string name="pleasure_stool_dimensions">(H) 255 mm, Top- 310 mm x 260 mm</string>
+    <string name="pleasure_stool_recommendations">RED, YEL, ORG, CBL, CPK, CGN</string>
+    <string name="pleasure_stool_colors">RED, YEL, ORG, CBL, CPK, CGN</string>
+
+    <string name="jcdw_dimensions">(L) 650 mm, (H) 450 mm, (W) 315 mm</string>
+    <string name="jcdw_features">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>
+    <string name="jcdw_capacity">75 Litres</string>
+
+    <string name="jcsw_dimensions">(L) 650 mm, (H) 450 mm, (W) 315 mm</string>
+    <string name="jcsw_features">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>.
+    <string name="jcsw_capacity">75 Litres</string>
+
+    <string name="mp21_features">Stackable Utility crates with sides closed. Multipurpose solid crate for fishery, industrial and retail business, processed foods storing and transporting.</string>
+    <string name="mp21_dimensions"></string>
+    <string name ="mp21_recommendations"></string>.
+    <string name ="mp21_capacity"></string>
+
+    <string name="mp22_features"></string>
+    <string name="mp22_dimensions"></string>
+    <string name ="mp22_recommendations"></string>.
+    <string name ="mp22_capacity"></string>
+
+    <string name="mp01_features"></string>
+    <string name="mp01_dimensions"></string>
+    <string name ="mp01_recommendations"></string>.
+    <string name ="mp01_capacity"></string>
+
+    <string name="mp11_features"></string>
+    <string name="mp11_dimensions"></string>
+    <string name ="mp11_recommendations"></string>.
+    <string name ="mp11_capacity"></string>
+
+    <string name="mp12_features"></string>
+    <string name="mp12_dimensions"></string>
+    <string name ="mp12_recommendations"></string>.
+    <string name ="mp12_capacity"></string>
+
+    <string name="bc01_features"></string>
+    <string name="bc01_dimensions"></string>
+    <string name="bc01_recommendations"></string>.
+    <string name="bc01_capacity"></string>
+
+    <string name="sindhushree_25_features"></string>
+    <string name="sindhushree_25_dimensions"></string>
+    <string name="sindhushree_25_recommendations"></string>.
+    <string name="sindhushree_25_capacity"></string>
+
+
+    <string name="sindhushree_21_features"></string>
+    <string name="sindhushree_21_dimensions"></string>
+    <string name="sindhushree_21_recommendations"></string>.
+    <string name="sindhushree_21_capacity"></string>
+
+    <string name="sindhushree_18_features"></string>
+    <string name="sindhushree_18_dimensions"></string>
+    <string name="sindhushree_18_recommendations"></string>.
+    <string name="sindhushree_18_capacity"></string>
+
+    <string name="jayashree_features"></string>
+    <string name="jayashree_dimensions"></string>
+    <string name="jayashree_recommendations"></string>.
+    <string name="jayashree_capacity"></string>
+
+    <string name="buckets_features"></string>
+    <string name="buckets_dimensions"></string>
+    <string name="buckets_recommendations"></string>.
+    <string name="buckets_capacity"></string>
+
 </resources>

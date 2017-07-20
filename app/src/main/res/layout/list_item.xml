@@ -12,14 +12,14 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/product_image"
+            android:id="@+id/list_item_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="center"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/furniture_solution"/>
         <TextView
-            android:id="@+id/product_name"
+            android:id="@+id/list_item_name"
             style="@style/CategoryText"
             android:gravity="center_horizontal"
             android:textAllCaps="true"

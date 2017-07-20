@@ -45,6 +45,34 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.deccanplast.app.deccanplastindustries.FurnitureActivity" />
         </activity>
+        <activity
+            android:name=".ProductPageActivity"
+            android:parentActivityName=".FurnitureActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deccanplast.app.deccanplastindustries.FurnitureActivity" />
+        </activity>
+        <activity
+            android:name=".OrderActivity"
+            android:parentActivityName=".FurnitureActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deccanplast.app.deccanplastindustries.FurnitureActivity" />
+        </activity>
+        <activity
+            android:name=".ChildrenChairs"
+            android:parentActivityName=".FurnitureActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.deccanplast.app.deccanplastindustries.FurnitureActivity" />
+
+        </activity>
     </application>
 
 </manifest>
