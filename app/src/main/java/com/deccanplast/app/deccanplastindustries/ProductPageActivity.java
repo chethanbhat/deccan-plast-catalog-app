@@ -34,6 +34,12 @@ public class ProductPageActivity extends AppCompatActivity {
         TextView productFeatures = (TextView)findViewById(R.id.product_features);
         productFeatures.setText(currentProduct.getmProductFeatures());
 
+        TextView productDimensions = (TextView)findViewById(R.id.product_dimensions);
+        productDimensions.setText(currentProduct.getmProductDimensions());
+
+        TextView productRecommendation = (TextView)findViewById(R.id.product_recommendation);
+        productRecommendation.setText(currentProduct.getmProductRecommendations());
+
         Button orderButton = (Button)findViewById(R.id.order_button);
 
         orderButton.setOnClickListener(new View.OnClickListener() {

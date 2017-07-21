@@ -4,7 +4,10 @@
     <color name="colorPrimaryDark">#A03F42</color>
     <color name="colorAccent">#414291</color>
     <color name="actionBarTextColor">#414291</color>
+    <color name="appBackgroundColor">#FFFDE7</color>
     <color name="categoryFurniture">#FFFDE7</color>
     <color name="categoryMHS">#FFF176</color>
     <color name="colorDeccanBlue">#414291</color>
+    <color name="blackHeadline">#000000</color>
+    <color name="whiteText">#FFFFFF</color>
 </resources>

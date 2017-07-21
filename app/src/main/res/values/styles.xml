@@ -21,19 +21,82 @@
         <item name="android:textColor">@color/actionBarTextColor</item>
     </style>
 
-    <style name="CategoryStyle">
+    <style name="ScrollStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="RootLinear">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MyLinearStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="MyHeadline" parent="MyLinearStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="CategoryStyle" parent="MyLinearStyle">
+        <item name="android:orientation">vertical</item>
     </style>
     
-    <style name="CategoryText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center_vertical</item>
+    <style name="CategoryText" parent="MyLinearStyle">
         <item name="android:textColor">@color/colorDeccanBlue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="LogoStyle" parent="MyLinearStyle">
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="ImageStyle" parent="MyLinearStyle">
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="OrderFields" parent="MyLinearStyle">
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+    </style>
+
+    <style name="OrderHeading" parent="OrderFields">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ProductHeadline" parent="MyLinearStyle">
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProductPrice" parent="MyLinearStyle">
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SubHeadline" parent="MyLinearStyle">
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="ProductFeatures" parent="MyLinearStyle">
+        <item name="android:textColor">@color/colorDeccanBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">start</item>
     </style>
 
 </resources>

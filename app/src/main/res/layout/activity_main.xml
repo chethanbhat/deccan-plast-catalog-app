@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/appBackgroundColor"
     tools:context="com.deccanplast.app.deccanplastindustries.MainActivity">
+<LinearLayout
+    style="@style/RootLinear">
+
+    <ImageView
+        style="@style/LogoStyle"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        style="@style/MyHeadline"
+        android:text="@string/app_name"
+        android:fontFamily="sans-serif-medium" />
 
     <LinearLayout
         android:id="@+id/furniture_category"
-        style="@style/CategoryStyle"
-        android:background="@color/categoryFurniture"
-        android:orientation="vertical">
+        style="@style/CategoryStyle">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:layout_gravity="center_horizontal"
+            style="@style/ImageStyle"
             android:src="@drawable/furniture_solution"/>
         <TextView
             style="@style/CategoryText"
-            android:gravity="center_horizontal"
             android:text="@string/furniture_solutions" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/mhs_category"
-        style="@style/CategoryStyle"
-        android:background="@color/categoryMHS"
-        android:orientation="vertical">
+        style="@style/CategoryStyle">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:layout_gravity="center_horizontal"
+            style="@style/ImageStyle"
             android:src="@drawable/mhs_solution"/>
 
         <TextView
             style="@style/CategoryText"
-            android:gravity="center_horizontal"
             android:text="@string/mhs_solution" />
 
     </LinearLayout>
-
 </LinearLayout>
+
+</ScrollView>

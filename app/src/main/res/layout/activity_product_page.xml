@@ -1,49 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/ScrollStyle"
+    android:background="@color/appBackgroundColor"
     tools:context="com.deccanplast.app.deccanplastindustries.ProductPageActivity">
 
-    <LinearLayout
-        android:id="@+id/furniture_category"
-        style="@style/CategoryStyle"
-        android:background="@color/categoryFurniture"
-        android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/RootLinear">
 
-        <TextView
-            android:id="@+id/product_name"
-            style="@style/CategoryText"
-            android:gravity="center_horizontal"/>
+        <LinearLayout
+            android:id="@+id/furniture_category"
+            style="@style/CategoryStyle">
 
-        <ImageView
-            android:id="@+id/product_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/product_name"
+                style="@style/ProductHeadline"
+                android:gravity="center_horizontal"/>
 
-        <TextView
-            android:id="@+id/product_price"
-            style="@style/CategoryText"
-            android:gravity="center_horizontal"/>
+            <ImageView
+                android:id="@+id/product_image"
+                style="@style/ImageStyle" />
 
-        <TextView
-            style="@style/CategoryText"
-            android:text="Key Features"/>
+            <TextView
+                android:id="@+id/product_price"
+                style="@style/ProductPrice"
+                android:fontFamily="sans-serif-regular" />
 
-        <TextView
-            android:id="@+id/product_features"
-            style="@style/CategoryText"/>
+            <TextView
+                style="@style/SubHeadline"
+                android:text="@string/dimensions" />
 
-        <Button
-            android:id="@+id/order_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Order Now"/>
+            <TextView
+                android:id="@+id/product_dimensions"
+                style="@style/ProductFeatures"/>
+
+            <TextView
+                style="@style/SubHeadline"
+                android:text="@string/features" />
+
+            <TextView
+                android:id="@+id/product_features"
+                style="@style/ProductFeatures" />
+
+            <TextView
+                android:id="@+id/product_recommendation"
+                style="@style/ProductFeatures" />
+
+            <Button
+                android:id="@+id/order_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDeccanBlue"
+                android:padding="16dp"
+                android:text="@string/order_now"
+                android:textColor="@color/whiteText" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

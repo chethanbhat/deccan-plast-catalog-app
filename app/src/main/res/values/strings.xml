@@ -2,6 +2,15 @@
     <string name="app_name">Deccan Plast Industries</string>
     <string name="furniture_solutions">Furniture Solutions</string>
     <string name="mhs_solution">Material Handling Solutions</string>
+    <string name="name_hint">Name</string>
+    <string name="quanity">Quantity</string>
+    <string name="default_quantity">1</string>
+    <string name="decrement_btn">-</string>
+    <string name="increment_btn">+</string>
+    <string name="order_now">Order Now</string>
+    <string name="submit_order">Submit Order</string>
+    <string name="dimensions">Dimensions</string>
+    <string name="features">Key Features</string>
 
     <string name="premium_relax_chairs_features">\u25CF Ergonomic \n\u25CF Extremely Comfortable Design \n\u25CF Higher seat height \n\u25CF Excellent support for lumber and neck \n\u25CF Ideal for leisure seating</string>
     <string name="premium_relax_chairs_dimensions">(H) 936 mm, (W) 615 mm, (D) 740 mm</string>
@@ -27,6 +36,7 @@
     <string name="midback_arm_chairs_dimensions_a">(H) 790 mm, (W) 585 mm, (D) 580 mm</string>
     <string name="midback_arm_chairs_dimensions_b">(H) 785 mm, (W) 550 mm, (D) 585 mm</string>
     <string name="midback_arm_chairs_recommendations">Recommended for homes, restaurants, dhabas, tent houses, marriage halls or renting business, etc</string>
+
     <string name="hexa_colors">YEL, CGN, CPK, ORG, RED</string>
     <string name="crysta_colors">YEL, CGN, CPK, ORG, RED</string>
     <string name="brezza_colors">YEL, CGN, CPK, ORG, RED</string>
@@ -72,7 +82,7 @@
     <string name="baby_chairs_recommendations">Very cute designs are available in attractive colors for kids from age group 2 to 10 years. Recommended for kindergartens, anganwadis, nursery, preprimary and primary.</string>
     <string name="baby_chairs_colors">NBL, PGN, ORG, RED, CPNK</string>
 
-    <string name="rocker_toy_features">\u25CF Cute Designs \n\u25CF Attractive Colors \n\u25CF Suitable for Kids from 2 to 10 years</string>
+    <string name="rocker_toy_features">\u25CF Cute Designs \n\u25CF Attractive Colors \n\u25CF Suitable for Kids from 1 to 5 years</string>
     <string name="rocker_toy_dimensions">(H) 480 mm, (W) 325 mm, (D) 570 mm</string>
     <string name="rocker_toy_recommendations">Rocker Toys are available in attractive color combos for kids of age group 1 to 5 years. Ideal as birthday gift. Recommended for kindergartens and day-care and anganwadis.</string>
     <string name="rocker_toy_colors">YEL, BLU</string>
@@ -98,56 +108,55 @@
     <string name="pleasure_stool_colors">RED, YEL, ORG, CBL, CPK, CGN</string>
 
     <string name="jcdw_dimensions">(L) 650 mm, (H) 450 mm, (W) 315 mm</string>
-    <string name="jcdw_features">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>
-    <string name="jcdw_capacity">75 Litres</string>
+    <string name="jcdw_features"><b>Carrying Capacity:</b> 75 Liters</string>
+    <string name="jcdw_recommendations">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>
 
     <string name="jcsw_dimensions">(L) 650 mm, (H) 450 mm, (W) 315 mm</string>
-    <string name="jcsw_features">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>.
-    <string name="jcsw_capacity">75 Litres</string>
+    <string name="jcsw_recommendations">Rubberized heavy duty stackable crates for roughest and toughest usage. Most useful in storing and transporting fish, fishmeal and many other industrial applications.</string>.
+    <string name="jcsw_features"><b>Carrying Capacity:</b> 75 Liters</string>
 
-    <string name="mp21_features">Stackable Utility crates with sides closed. Multipurpose solid crate for fishery, industrial and retail business, processed foods storing and transporting.</string>
+    <string name="mp21_recommendations">Stackable Utility crates with sides closed. Multipurpose solid crate for fishery, industrial and retail business, processed foods storing and transporting.</string>
     <string name="mp21_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
-    <string name="mp21_capacity">55 Litres</string>
+    <string name="mp21_features"><b>Carrying Capacity:</b> 55 Liters</string>
 
-    <string name="mp22_features">Stackable Utility crates with side jaali. Multipurpose jali crate for flowers, bananas, grocery, processed foods storing and transporting.</string>
+    <string name="mp22_recommendations">Stackable Utility crates with side jaali. Multipurpose jali crate for flowers, bananas, grocery, processed foods storing and transporting.</string>
     <string name="mp22_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
-    <string name="mp22_capacity">55 Litres</string>
+    <string name="mp22_features"><b>Carrying Capacity:</b> 55 Liters</string>
 
-    <string name="mp01_features">Multipurpose jaali crate for veg, fruits, processed foods storing and transporting.</string>
+    <string name="mp01_recommendations">Multipurpose jaali crate for veg, fruits, processed foods storing and transporting.</string>
     <string name="mp01_dimensions">(L) 540 mm, (H) 365 mm, (W) 290 mm</string>
-    <string name="mp01_capacity">45 Litres</string>
+    <string name="mp01_features"><b>Carrying Capacity:</b> 45 Liters</string>
 
-    <string name="mp11_features">Multipurpose jaali crate for tomato, flowers, storing and transporting.</string>
+    <string name="mp11_recommendations">Multipurpose jaali crate for tomato, flowers, storing and transporting.</string>
     <string name="mp11_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
-    <string name="mp11_capacity">30 Litres</string>
+    <string name="mp11_features"><b>Carrying Capacity:</b> 30 Liters</string>
 
-    <string name="mp12_features">Multipurpose jaali crate for tomato, grapes, flowers storing and transporting.</string>
+    <string name="mp12_recommendations">Multipurpose jaali crate for tomato, grapes, flowers storing and transporting.</string>
     <string name="mp12_dimensions">(L) 600 mm, (W) 400 mm, (H) 285 mm</string>
-    <string name="mp12_capacity">28 Litres</string>
+    <string name="mp12_features"><b>Carrying Capacity:</b> 28 Liters</string>
 
-    <string name="bc01_features">Stackable Crates for soda and cold beverage industry for storing and transport. Ideal for branding product logo.</string>
+    <string name="bc01_recommendations">Stackable Crates for soda and cold beverage industry for storing and transport. Ideal for branding product logo.</string>
     <string name="bc01_dimensions">(L) 420 mm, (H) 140 mm, (W) 200 mm</string>
-    <string name="bc01_capacity">Bottle Type: 200 ml to 300 ml, Pocket Size: 62mm x 24 Nos</string>
+    <string name="bc01_features"><b>Bottle Type:</b> 200 ml to 300 ml, <b>Pocket Size:</b> 62mm x 24 Nos</string>
 
-    <string name="sindhushree_25_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_features">Unbreakable basket with rope handles.</string>
+    <string name="sindhushree_recomendations">For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+
+    <string name="sindhushree_25_recommendations">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
     <string name="sindhushree_25_dimensions">ϕ 640mm, (H) 400mm</string>
-    <string name="sindhushree_25_capacity">N.A</string>
 
-
-    <string name="sindhushree_21_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_21_recommendations">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
     <string name="sindhushree_21_dimensions">ϕ 540mm, (H) 230mm</string>
-    <string name="sindhushree_21_capacity">N.A</string>
 
-    <string name="sindhushree_18_features">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
+    <string name="sindhushree_18_recommendations">Unbreakable basket with rope handles. For handling fish, ice, fruits, vegetables and products of horticulture industry.</string>
     <string name="sindhushree_18_dimensions">ϕ 470mm, (H) 215mm</string>
-    <string name="sindhushree_18_capacity">N.A</string>
 
-    <string name="jayashree_features">Unbreakable butti with molded handles. For agriculture produce and construction sites for sand and concrete.</string>
+    <string name="jayashree_features">Unbreakable butti with molded handles.</string>
+    <string name="jayashree_recommendations">For agriculture produce and construction sites for sand and concrete.</string>
     <string name="jayashree_dimensions">(ϕ) 530mm, (H) 165mm</string>
-    <string name="jayashree_capacity">N.A</string>
 
-    <string name="buckets_features">Unbreakable 17 LTR bucket with molded handle. Most popular size for households or any hotel or lodge bathroom.</string>
+    <string name="buckets_recommendations">Unbreakable 17 LTR bucket with molded handle. Most popular size for households or any hotel or lodge bathroom.</string>
     <string name="buckets_dimensions">ϕ 335mm, (H) 400mm</string>
-    <string name="buckets_capacity">17 Ltrs</string>
+    <string name="buckets_features"><b>Carrying Capacity:</b> 17 Liters</string>
 
 </resources>

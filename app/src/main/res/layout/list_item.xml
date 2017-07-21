@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    style="@style/RootLinear"
+    android:background="@color/appBackgroundColor"
     tools:context="com.deccanplast.app.deccanplastindustries.FurnitureActivity">
 
     <LinearLayout
         style="@style/CategoryStyle"
-        android:background="@color/categoryFurniture"
-        android:orientation="vertical">
+        android:background="@color/categoryFurniture">
 
         <ImageView
             android:id="@+id/list_item_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:layout_gravity="center_horizontal"
+            style="@style/ImageStyle"
             android:src="@drawable/furniture_solution"/>
         <TextView
             android:id="@+id/list_item_name"
             style="@style/CategoryText"
-            android:gravity="center_horizontal"
-            android:textAllCaps="true"
             android:text="@string/furniture_solutions" />
-
     </LinearLayout>
 
 </LinearLayout>

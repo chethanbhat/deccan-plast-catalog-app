@@ -3,46 +3,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:layout_width="match_parent" >
+    android:layout_width="match_parent"
+    android:background="@color/appBackgroundColor"
+    tools:context="com.deccanplast.app.deccanplastindustries.OrderActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context="com.deccanplast.app.deccanplastindustries.OrderActivitySActivity">
+        style="@style/RootLinear">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/name"
-            android:layout_marginBottom="16dp"
-            android:hint="Name" />
+            style="@style/OrderFields"
+            android:hint="@string/name_hint" />
 
         <TextView
             android:id="@+id/product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textSize="16sp"
-            android:textAllCaps="true" />
+            style="@style/OrderHeading"
+            android:fontFamily="sans-serif-medium"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Quantity" />
+            style="@style/OrderHeading"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/quanity" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
 
             <Button
                 android:id="@+id/decrement_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-" />
+                android:background="@color/colorDeccanBlue"
+                android:textColor="@color/whiteText"
+                android:textStyle="bold"
+                android:text="@string/decrement_btn" />
 
             <TextView
                 android:id="@+id/quantity_text_view"
@@ -50,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="1"
+                android:text="@string/default_quantity"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -58,17 +54,23 @@
                 android:id="@+id/increment_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+" />
+                android:background="@color/colorDeccanBlue"
+                android:textColor="@color/whiteText"
+                android:textStyle="bold"
+                android:text="@string/increment_btn" />
 
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:onClick="submitOrder"
-            android:text="Submit Order" />
+            android:padding="16dp"
+            android:background="@color/colorDeccanBlue"
+            android:textColor="@color/whiteText"
+            android:text="@string/submit_order" />
 
     </LinearLayout>
 </ScrollView>

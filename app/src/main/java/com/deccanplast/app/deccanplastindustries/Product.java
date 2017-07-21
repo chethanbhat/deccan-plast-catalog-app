@@ -15,6 +15,8 @@ public class Product implements Parcelable {
     private String mProductName;
     private int mProductCost;
     private String mProductFeatures;
+    private String mProductDimensions;
+    private String mProductRecommendations;
 
     public Product(){
 
@@ -39,6 +41,8 @@ public class Product implements Parcelable {
         this.mProductImageId = parcel.readInt();
         this.mProductCost = parcel.readInt();
         this.mProductFeatures = parcel.readString();
+        this.mProductDimensions = parcel.readString();
+        this.mProductRecommendations = parcel.readString();
     }
 
     @Override
@@ -54,6 +58,10 @@ public class Product implements Parcelable {
         out.writeInt(mProductImageId);
         out.writeInt(mProductCost);
         out.writeString(mProductFeatures);
+        out.writeString(mProductDimensions);
+        out.writeString(mProductRecommendations);
+
+
     }
 
     // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
@@ -105,5 +113,21 @@ public class Product implements Parcelable {
 
     public void setmProductFeatures(String mProductFeatures) {
         this.mProductFeatures = mProductFeatures;
+    }
+
+    public String getmProductDimensions() {
+        return mProductDimensions;
+    }
+
+    public void setmProductDimensions(String mProductDimensions) {
+        this.mProductDimensions = mProductDimensions;
+    }
+
+    public String getmProductRecommendations() {
+        return mProductRecommendations;
+    }
+
+    public void setmProductRecommendations(String mProductRecommendations) {
+        this.mProductRecommendations = mProductRecommendations;
     }
 }

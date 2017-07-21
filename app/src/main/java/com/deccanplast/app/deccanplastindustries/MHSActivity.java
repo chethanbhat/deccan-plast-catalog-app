@@ -72,6 +72,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.jcdw_double_wall);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(970);
+                product.setmProductFeatures(getString(R.string.jcdw_features));
+                product.setmProductDimensions(getString(R.string.jcdw_dimensions));
+                product.setmProductRecommendations(getString(R.string.jcdw_recommendations));
                 break;
             case 1:
                 activityTitle = "JCSW";
@@ -79,6 +82,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.jcsw_single_wall);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(875);
+                product.setmProductFeatures(getString(R.string.jcsw_features));
+                product.setmProductDimensions(getString(R.string.jcsw_dimensions));
+                product.setmProductRecommendations(getString(R.string.jcsw_recommendations));
                 break;
             case 2:
                 activityTitle = "JCSWH";
@@ -86,6 +92,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.jcsw_single_wall);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(875);
+                product.setmProductFeatures(getString(R.string.jcsw_features));
+                product.setmProductDimensions(getString(R.string.jcsw_dimensions));
+                product.setmProductRecommendations(getString(R.string.jcsw_recommendations));
                 break;
             case 3:
                 activityTitle = "MP 21";
@@ -93,6 +102,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.mp_11_mini_veg);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(740);
+                product.setmProductFeatures(getString(R.string.mp11_features));
+                product.setmProductDimensions(getString(R.string.mp11_dimensions));
+                product.setmProductRecommendations(getString(R.string.mp11_recommendations));
                 break;
             case 4:
                 activityTitle = "MP 22";
@@ -100,6 +112,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.mp_11_mini_veg);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(620);
+                product.setmProductFeatures(getString(R.string.mp11_features));
+                product.setmProductDimensions(getString(R.string.mp11_dimensions));
+                product.setmProductRecommendations(getString(R.string.mp11_recommendations));
                 break;
             case 5:
                 activityTitle = "MP Multipurpose 01";
@@ -107,6 +122,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.multipurpose_crate);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(350);
+                product.setmProductFeatures(getString(R.string.mp01_features));
+                product.setmProductDimensions(getString(R.string.mp01_dimensions));
+                product.setmProductRecommendations(getString(R.string.mp01_recommendations));
                 break;
             case 6:
                 activityTitle = "MP 11";
@@ -114,6 +132,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.mp_11_mini_veg);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(350);
+                product.setmProductFeatures(getString(R.string.mp11_features));
+                product.setmProductDimensions(getString(R.string.mp11_dimensions));
+                product.setmProductRecommendations(getString(R.string.mp11_recommendations));
                 break;
             case 7:
                 activityTitle = "MP 12";
@@ -121,6 +142,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.mp_11_mini_veg);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(970);
+                product.setmProductFeatures(getString(R.string.mp12_features));
+                product.setmProductDimensions(getString(R.string.mp12_dimensions));
+                product.setmProductRecommendations(getString(R.string.mp12_recommendations));
                 break;
             case 8:
                 activityTitle = "BC01 Bottle Crate";
@@ -128,6 +152,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.bottle_crate);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(500);
+                product.setmProductFeatures(getString(R.string.bc01_features));
+                product.setmProductDimensions(getString(R.string.bc01_dimensions));
+                product.setmProductRecommendations(getString(R.string.bc01_recommendations));
                 break;
             case 9:
                 activityTitle = "Sindushree 25";
@@ -135,6 +162,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.sindhushree);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(350);
+                product.setmProductFeatures(getString(R.string.sindhushree_features));
+                product.setmProductDimensions(getString(R.string.sindhushree_25_dimensions));
+                product.setmProductRecommendations(getString(R.string.sindhushree_recomendations));
                 break;
             case 10:
                 activityTitle = "Sindushree 21";
@@ -142,6 +172,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.sindhushree);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(250);
+                product.setmProductFeatures(getString(R.string.sindhushree_features));
+                product.setmProductDimensions(getString(R.string.sindhushree_21_dimensions));
+                product.setmProductRecommendations(getString(R.string.sindhushree_recomendations));
                 break;
             case 11:
                 activityTitle = "Sindushree 18";
@@ -149,6 +182,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.sindhushree);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(250);
+                product.setmProductFeatures(getString(R.string.sindhushree_features));
+                product.setmProductDimensions(getString(R.string.sindhushree_18_dimensions));
+                product.setmProductRecommendations(getString(R.string.sindhushree_recomendations));
                 break;
             case 12:
                 activityTitle = "Jayashree Butti";
@@ -156,6 +192,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.jayashree);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(255);
+                product.setmProductFeatures(getString(R.string.jayashree_features));
+                product.setmProductDimensions(getString(R.string.jayashree_dimensions));
+                product.setmProductRecommendations(getString(R.string.jayashree_recommendations));
                 break;
             case 13:
                 activityTitle = "Buckets";
@@ -163,6 +202,9 @@ public class MHSActivity extends AppCompatActivity {
                 product.setmProductImageId(R.drawable.bucket);
                 product.setmProductName(activityTitle);
                 product.setmProductCost(180);
+                product.setmProductFeatures(getString(R.string.buckets_features));
+                product.setmProductDimensions(getString(R.string.buckets_dimensions));
+                product.setmProductRecommendations(getString(R.string.buckets_recommendations));
                 break;
         }
 

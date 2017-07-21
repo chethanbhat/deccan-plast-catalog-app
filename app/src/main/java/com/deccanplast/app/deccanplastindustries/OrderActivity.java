@@ -32,6 +32,7 @@ public class OrderActivity extends AppCompatActivity {
 
         Button incrementButton = (Button)(findViewById(R.id.increment_button));
         Button decrementButton = (Button)(findViewById(R.id.decrement_button));
+        Button submitButton = (Button)findViewById(R.id.submit_button);
 
         incrementButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,15 @@ public class OrderActivity extends AppCompatActivity {
                 decrement();
             }
         });
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                submitOrder();
+            }
+        });
+
+
 
     }
 
@@ -104,7 +114,7 @@ public class OrderActivity extends AppCompatActivity {
 
     }
 
-    public void submitOrder(View view) {
+    public void submitOrder() {
 
         EditText userNameBox = (EditText) findViewById(R.id.name);
 
