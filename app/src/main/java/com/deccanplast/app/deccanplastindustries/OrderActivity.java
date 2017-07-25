@@ -117,9 +117,11 @@ public class OrderActivity extends AppCompatActivity {
     public void submitOrder() {
 
         EditText userNameBox = (EditText) findViewById(R.id.name);
+        EditText userPhone = (EditText) findViewById(R.id.phone);
 
 
-        String orderSummary = "Name: " + userNameBox.getText().toString();;
+        String orderSummary = "Name: " + userNameBox.getText().toString();
+        orderSummary += "\nPhone Number: " + userPhone.getText().toString();
         orderSummary += "\nProduct: " + productName;
         orderSummary += "\nQuantity: " + quantity;
         orderSummary += "\nThank You!";

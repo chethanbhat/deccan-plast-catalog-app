@@ -24,14 +24,14 @@ public class FurnitureActivity extends AppCompatActivity {
             categories.add(new Category(102,"premium arm chairs", R.drawable.bently));
             categories.add(new Category(103, "premium high back chairs", R.drawable.porsche));
             categories.add(new Category(104, "premium dining chairs", R.drawable.hexa));
-            categories.add(new Category(105, "mid back arm chairs", R.drawable.brio));
+            categories.add(new Category(105, "mid back arm chairs", R.drawable.eon));
             categories.add(new Category(106, "high back dining chairs", R.drawable.figo));
             categories.add(new Category(107, "armless chairs", R.drawable.nano));
-            categories.add(new Category(108, "dining tables", R.drawable.calicut_round_table));
+            categories.add(new Category(108, "dining tables", R.drawable.calicut_round_tables));
             categories.add(new Category(109, "center tables", R.drawable.innova));
             categories.add(new Category(110, "multi seating systems", R.drawable.ritz));
-            categories.add(new Category(114, "stools", R.drawable.rattan));
-            categories.add(new Category(777, "children chairs", R.drawable.gogo_baby_rocker));
+            categories.add(new Category(114, "stools", R.drawable.maestro_rattan));
+            categories.add(new Category(777, "children chairs", R.drawable.baby_rocker));
 
         // Create an {@link ProductAdapter}, whose data source is a list of {@link Product}s. The
         // adapter knows how to create list items for each item in the list.
@@ -80,7 +80,7 @@ public class FurnitureActivity extends AppCompatActivity {
                 activityTitle = "Premium Relax Chairs";
                 break;
             case 102:
-                productsToPass.add(new Product(10201,"Buggati", R.drawable.buggatti));
+                productsToPass.add(new Product(10201,"Buggati", R.drawable.buggati));
                 productsToPass.add(new Product(10202,"Bently", R.drawable.bently));
                 activityTitle = "Premium Arm Chairs";
                 break;
@@ -102,7 +102,7 @@ public class FurnitureActivity extends AppCompatActivity {
                 productsToPass.add(new Product(10503,"Amaze", R.drawable.amaze));
                 productsToPass.add(new Product(10504,"Eon", R.drawable.eon));
                 productsToPass.add(new Product(10505,"Brio", R.drawable.brio));
-                productsToPass.add(new Product(10506,"Up", R.drawable.up_mid));
+                productsToPass.add(new Product(10506,"Up", R.drawable.up));
                 activityTitle = "Premium Mid Back Chairs";
                 break;
             case 106:
@@ -115,8 +115,8 @@ public class FurnitureActivity extends AppCompatActivity {
                 activityTitle = "Armless Chairs";
                 break;
             case 108:
-                productsToPass.add(new Product(10801,"Mangalore Dining Tables", R.drawable.mangalore_dining_table));
-                productsToPass.add(new Product(10802,"Calicut Dining Tables", R.drawable.calicut_round_table));
+                productsToPass.add(new Product(10801,"Mangalore Dining Tables", R.drawable.mangalore_dining_tables));
+                productsToPass.add(new Product(10802,"Calicut Dining Tables", R.drawable.calicut_round_tables));
                 activityTitle = "Dining Tables";
                 break;
             case 109:
@@ -141,14 +141,14 @@ public class FurnitureActivity extends AppCompatActivity {
                 activityTitle = "Baby Chairs";
                 break;
             case 113:
-                productsToPass.add(new Product(11301,"Gogo Rocker Toy", R.drawable.gogo_baby_rocker));
+                productsToPass.add(new Product(11301,"Gogo Rocker Toy", R.drawable.baby_rocker));
                 activityTitle = "Rocker Toys";
                 break;
             case 114:
-                productsToPass.add(new Product(11401,"Maestro Rattan", R.drawable.rattan));
-                productsToPass.add(new Product(11402,"Pulsar", R.drawable.pulsar21));
+                productsToPass.add(new Product(11401,"Maestro Rattan", R.drawable.maestro_rattan));
+                productsToPass.add(new Product(11402,"Pulsar", R.drawable.pulsar));
                 productsToPass.add(new Product(11403,"Activa", R.drawable.activa));
-                productsToPass.add(new Product(11404,"Pleasure", R.drawable.pleasure_bath));
+                productsToPass.add(new Product(11404,"Pleasure", R.drawable.pleasure));
                 activityTitle = "Stools";
                 break;
         }
@@ -166,7 +166,7 @@ public class FurnitureActivity extends AppCompatActivity {
 
         categoryChildren.add(new Category(111,"Mini Chairs", R.drawable.ferrari_mini));
         categoryChildren.add(new Category(112,"Baby Chairs", R.drawable.baby_abcd));
-        categoryChildren.add(new Category(113,"Rocker Toys", R.drawable.gogo_baby_rocker));
+        categoryChildren.add(new Category(113,"Rocker Toys", R.drawable.baby_rocker));
         activityTitle = "Children Chairs";
 
         Intent activityIntent = new Intent(getApplicationContext(), activityClass);

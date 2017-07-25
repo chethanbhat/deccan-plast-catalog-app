@@ -3,6 +3,7 @@
     <string name="furniture_solutions">Furniture Solutions</string>
     <string name="mhs_solution">Material Handling Solutions</string>
     <string name="name_hint">Name</string>
+    <string name="phone_hint">+919535626988</string>
     <string name="quanity">Quantity</string>
     <string name="default_quantity">1</string>
     <string name="decrement_btn">-</string>

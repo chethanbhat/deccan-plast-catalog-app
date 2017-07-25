@@ -69,7 +69,7 @@ public class ChildrenChairs extends AppCompatActivity {
                         activityTitle = "Baby Chairs";
                         break;
                     case 113:
-                        productsToPass.add(new Product(11301,"Gogo Rocker Toy", R.drawable.gogo_baby_rocker));
+                        productsToPass.add(new Product(11301,"Gogo Rocker Toy", R.drawable.baby_rocker));
                         activityTitle = "Rocker Toys";
                         break;
                 }
