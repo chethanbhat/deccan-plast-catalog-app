@@ -13,11 +13,6 @@
         style="@style/LogoStyle"
         android:src="@drawable/logo"/>
 
-    <TextView
-        style="@style/MyHeadline"
-        android:text="@string/app_name"
-        android:fontFamily="sans-serif-medium" />
-
     <LinearLayout
         android:id="@+id/furniture_category"
         style="@style/CategoryStyle">

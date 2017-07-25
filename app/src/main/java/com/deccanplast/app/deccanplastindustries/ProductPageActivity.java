@@ -2,14 +2,27 @@ package com.deccanplast.app.deccanplastindustries;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class ProductPageActivity extends AppCompatActivity {
+
+    private ViewPager mPager;
+    private int currentPage = 0;
+    private ArrayList<Integer> imageArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +39,16 @@ public class ProductPageActivity extends AppCompatActivity {
         productTitle.setText(currentProduct.getmProductName());
 
         ImageView productImage = (ImageView)findViewById(R.id.product_image);
-        productImage.setImageResource(currentProduct.getmProductImageId());
+
+        if(currentProduct.hasSlider()){
+            productImage.setVisibility(View.GONE);
+            init(currentProduct.getmProductSlider());
+        }else{
+            productImage.setImageResource(currentProduct.getmProductImageId());
+            productImage.setVisibility(View.VISIBLE);
+            findViewById(R.id.pager).setVisibility(View.GONE);
+            findViewById(R.id.indicator).setVisibility(View.GONE);
+        }
 
         TextView productPrice = (TextView)findViewById(R.id.product_price);
         productPrice.setText("Unit Price: " + currentProduct.getmProductCost());
@@ -53,6 +75,43 @@ public class ProductPageActivity extends AppCompatActivity {
             }
         });
 
+        if(currentProduct.getmProductCode() == 10101){
+            int[] sliderImages = currentProduct.getmProductSlider();
+
+            Log.v("Product Page Activity", String.valueOf(sliderImages.length));
+
+            for(int i=0; i < sliderImages.length; i++)
+            {
+                Log.v("Product Page Activity", String.valueOf(sliderImages[i]));
+            }
+
+        }
+    }
+
+    private void init(final int[] sliderImageResourceId) {
+
+        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager.setAdapter(new SliderAdapter(getApplicationContext(),sliderImageResourceId));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == sliderImageResourceId.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 5000, 5000);
     }
 
     @Override
