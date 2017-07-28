@@ -145,9 +145,9 @@ public class FurnitureActivity extends AppCompatActivity {
                 activityTitle = "Rocker Toys";
                 break;
             case 114:
-                productsToPass.add(new Product(11401,"Maestro Rattan", R.drawable.maestro_rattan));
-                productsToPass.add(new Product(11402,"Pulsar", R.drawable.pulsar));
-                productsToPass.add(new Product(11403,"Activa", R.drawable.activa));
+                productsToPass.add(new Product(11401,"Pulsar", R.drawable.pulsar));
+                productsToPass.add(new Product(11402,"Activa", R.drawable.activa));
+                productsToPass.add(new Product(11403,"Maestro Rattan", R.drawable.maestro_rattan));
                 productsToPass.add(new Product(11404,"Pleasure", R.drawable.pleasure));
                 activityTitle = "Stools";
                 break;

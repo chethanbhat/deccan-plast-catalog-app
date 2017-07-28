@@ -24,7 +24,7 @@
 
             <me.relex.circleindicator.CircleIndicator
                 android:id="@+id/indicator"
-                android:background="@color/colorDeccanBlue"
+                android:background="@color/appBackgroundColor"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"/>

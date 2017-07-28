@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -74,18 +73,6 @@ public class ProductPageActivity extends AppCompatActivity {
                 startActivity(activityIntent);
             }
         });
-
-        if(currentProduct.getmProductCode() == 10101){
-            int[] sliderImages = currentProduct.getmProductSlider();
-
-            Log.v("Product Page Activity", String.valueOf(sliderImages.length));
-
-            for(int i=0; i < sliderImages.length; i++)
-            {
-                Log.v("Product Page Activity", String.valueOf(sliderImages[i]));
-            }
-
-        }
     }
 
     private void init(final int[] sliderImageResourceId) {
