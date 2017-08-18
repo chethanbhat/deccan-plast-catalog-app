@@ -23,7 +23,7 @@ public class MHSActivity extends AppCompatActivity {
         categories.add(new Category(20201,"JCSW Single Wall Crate",R.drawable.jcsw_single_wall));
         categories.add(new Category(20301,"JCSWH Single Wall Crate (Handle)",R.drawable.jcsw_handle));
         categories.add(new Category(20401,"MP21 Utility Crate",R.drawable.mp21));
-        categories.add(new Category(20501,"MP22 Utility Crate",R.drawable.mp12));
+        categories.add(new Category(20501,"MP22 Utility Crate",R.drawable.mp22));
         categories.add(new Category(20601,"MP01 Multipurpose Crate",R.drawable.multipurpose_crate));
         categories.add(new Category(20701,"MP11 Mini Veg Crate",R.drawable.mp11_mini));
         categories.add(new Category(20801,"MP12 Mini Veg Crate",R.drawable.mp12));

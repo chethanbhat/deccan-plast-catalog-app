@@ -2,7 +2,6 @@ package com.deccanplast.app.deccanplastindustries;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -12,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -50,7 +47,7 @@ public class ProductPageActivity extends AppCompatActivity {
         }
 
         TextView productPrice = (TextView)findViewById(R.id.product_price);
-        productPrice.setText("Unit Price: " + currentProduct.getmProductCost());
+        productPrice.setText("Unit Price: ₹ " + currentProduct.getmProductCost() + "/-");
 
         TextView productFeatures = (TextView)findViewById(R.id.product_features);
         productFeatures.setText(currentProduct.getmProductFeatures());
@@ -82,23 +79,24 @@ public class ProductPageActivity extends AppCompatActivity {
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
-        // Auto start of viewpager
-        final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            public void run() {
-                if (currentPage == sliderImageResourceId.length) {
-                    currentPage = 0;
-                }
-                mPager.setCurrentItem(currentPage++, true);
-            }
-        };
-        Timer swipeTimer = new Timer();
-        swipeTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(Update);
-            }
-        }, 5000, 5000);
+
+//        // Disable to comments to Auto start of viewpager slider.
+//        final Handler handler = new Handler();
+//        final Runnable Update = new Runnable() {
+//            public void run() {
+//                if (currentPage == sliderImageResourceId.length) {
+//                    currentPage = 0;
+//                }
+//                mPager.setCurrentItem(currentPage++, true);
+//            }
+//        };
+//        Timer swipeTimer = new Timer();
+//        swipeTimer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                handler.post(Update);
+//            }
+//        }, 5000, 5000);
     }
 
     @Override
