@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -19,6 +20,7 @@ public class ProductPageActivity extends AppCompatActivity {
     private ViewPager mPager;
     private int currentPage = 0;
     private ArrayList<Integer> imageArray = new ArrayList<>();
+    private String colorsAvailable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +40,12 @@ public class ProductPageActivity extends AppCompatActivity {
 
         if(currentProduct.hasSlider()){
             productImage.setVisibility(View.GONE);
-            init(currentProduct.getmProductSlider());
+            init(currentProduct.getmProductSlider(),currentProduct.getmProductColors());
         }else{
             productImage.setImageResource(currentProduct.getmProductImageId());
             productImage.setVisibility(View.VISIBLE);
+            findViewById(R.id.colors_available_headline).setVisibility(View.GONE);
+            findViewById(R.id.product_colors).setVisibility(View.GONE);
             findViewById(R.id.pager).setVisibility(View.GONE);
             findViewById(R.id.indicator).setVisibility(View.GONE);
         }
@@ -55,6 +59,12 @@ public class ProductPageActivity extends AppCompatActivity {
         TextView productDimensions = (TextView)findViewById(R.id.product_dimensions);
         productDimensions.setText(currentProduct.getmProductDimensions());
 
+        if(currentProduct.hasColors()){
+            TextView productColors = (TextView)findViewById(R.id.product_colors);
+            colorsAvailable = Arrays.toString(currentProduct.getmProductColors()).replaceAll("\\[|\\]|\\s", "");
+            productColors.setText(colorsAvailable.replaceAll(",",", "));
+        }
+
         TextView productRecommendation = (TextView)findViewById(R.id.product_recommendation);
         productRecommendation.setText(currentProduct.getmProductRecommendations());
 
@@ -65,17 +75,17 @@ public class ProductPageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Class activityClass = OrderActivity.class;
                 Intent activityIntent = new Intent(getApplicationContext(), activityClass);
-                activityIntent.putExtra("product",currentProduct.getmProductName());
+                activityIntent.putExtra("product", currentProduct);
                 activityIntent.putExtra("activityTitle","Order Now: " + currentProduct.getmProductName());
                 startActivity(activityIntent);
             }
         });
     }
 
-    private void init(final int[] sliderImageResourceId) {
+    private void init(final int[] sliderImageResourceId, final String[] sliderProductColorId) {
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new SliderAdapter(getApplicationContext(),sliderImageResourceId));
+        mPager.setAdapter(new SliderAdapter(getApplicationContext(),sliderImageResourceId,sliderProductColorId));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 

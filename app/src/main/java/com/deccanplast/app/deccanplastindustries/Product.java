@@ -18,6 +18,7 @@ public class Product implements Parcelable {
     private String mProductDimensions;
     private String mProductRecommendations;
     private int[] mProductSlider;
+    private String[] mProductColors;
 
     public Product(){
 
@@ -45,6 +46,7 @@ public class Product implements Parcelable {
         this.mProductDimensions = parcel.readString();
         this.mProductRecommendations = parcel.readString();
         this.mProductSlider = parcel.createIntArray();
+        this.mProductColors = parcel.createStringArray();
     }
 
     @Override
@@ -63,6 +65,7 @@ public class Product implements Parcelable {
         out.writeString(mProductDimensions);
         out.writeString(mProductRecommendations);
         out.writeIntArray(mProductSlider);
+        out.writeStringArray(mProductColors);
 
 
     }
@@ -142,8 +145,20 @@ public class Product implements Parcelable {
         this.mProductSlider = mProductSlider;
     }
 
+    public String[] getmProductColors() {
+        return mProductColors;
+    }
+
+    public void setmProductColors(String[] mProductColors) {
+        this.mProductColors = mProductColors;
+    }
+
     public boolean hasSlider(){
         return mProductSlider != null;
+    }
+
+    public boolean hasColors(){
+        return mProductColors != null;
     }
 
 }

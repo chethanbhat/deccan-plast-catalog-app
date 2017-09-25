@@ -7,15 +7,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+
 public class OrderActivity extends AppCompatActivity {
 
-    int quantity = 1;
-    String productName;
+    private int quantity = 1;
+    private String productName;
+    private AwesomeValidation awesomeValidation;
+    static final int PICK_EMAIL_REQUEST = 1;  // The request code
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +32,26 @@ public class OrderActivity extends AppCompatActivity {
         Intent orderIntent = getIntent();
         setTitle(orderIntent.getStringExtra("activityTitle"));
 
-        productName = orderIntent.getStringExtra("product");
+        final Product currentProduct = orderIntent.getParcelableExtra("product");
+
+        productName = "Product Name: " +  currentProduct.getmProductName();
+
+        if(currentProduct.hasColors())
+        {
+            Spinner spinner = findViewById(R.id.colorSpinner);
+
+            // Create an ArrayAdapter using the string array and a default spinner layout
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, currentProduct.getmProductColors());
+            // Apply the adapter to the spinner
+            spinner.setAdapter(adapter);
+
+        }else {
+            findViewById(R.id.colorsHeading).setVisibility(View.GONE);
+            findViewById(R.id.colorSpinner).setVisibility(View.GONE);
+        }
 
         TextView productNameTextView = (TextView)findViewById(R.id.product);
-        productNameTextView.setText("Product Name: " + productName);
+        productNameTextView.setText(productName);
 
         Button incrementButton = (Button)(findViewById(R.id.increment_button));
         Button decrementButton = (Button)(findViewById(R.id.decrement_button));
@@ -91,7 +114,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks if Chocolate Topping has been added.
+     * Creates toast message for increment and decrement
      * @param message indicates toast message.
      *
      */
@@ -114,30 +137,76 @@ public class OrderActivity extends AppCompatActivity {
 
     }
 
+    public boolean validateInfo(){
+
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+
+        awesomeValidation.addValidation(this, R.id.name, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.name_error);
+        awesomeValidation.addValidation(this, R.id.phone, "((\\+*)((0[ -]+)*|(91 )*)(\\d{12}+|\\d{10}+))|\\d{5}([- ]*)\\d{6}", R.string.phone_error);
+        awesomeValidation.addValidation(this, R.id.address,"[a-zA-Z0-9.\\[\\]()\\s,\\/\\\\-]+", R.string.address_error);
+        awesomeValidation.addValidation(this, R.id.city, "[a-zA-Z\\s]+", R.string.city_error);
+        awesomeValidation.addValidation(this, R.id.pincode, "[0-9]{6}", R.string.pincode_error);
+
+        return awesomeValidation.validate();
+
+
+    }
+
     public void submitOrder() {
 
-        EditText userNameBox = (EditText) findViewById(R.id.name);
-        EditText userPhone = (EditText) findViewById(R.id.phone);
+        if(validateInfo())
+        {
+            String colorSelected = "";
+            EditText name = (EditText) findViewById(R.id.name);
+            EditText phone = (EditText) findViewById(R.id.phone);
+            EditText address = (EditText)findViewById(R.id.address);
+            EditText city = (EditText)findViewById(R.id.city);
+            EditText pincode = (EditText)findViewById(R.id.pincode);
+            if(findViewById(R.id.colorSpinner).getVisibility() == View.VISIBLE)
+            {
+                Spinner color = (Spinner)findViewById(R.id.colorSpinner);
+                colorSelected = color.getItemAtPosition(color.getSelectedItemPosition()).toString() ;
+            }
 
 
-        String orderSummary = "Name: " + userNameBox.getText().toString();
-        orderSummary += "\nPhone Number: " + userPhone.getText().toString();
-        orderSummary += "\nProduct: " + productName;
-        orderSummary += "\nQuantity: " + quantity;
-        orderSummary += "\nThank You!";
 
-        String emailAddress = "chethanbhat@gmail.com";
-        String emailSubject = "Order Summary - Deccan App";
 
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setType("*/*");
-        intent.setData(Uri.parse("mailto:"+emailAddress)); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
-        intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
-        intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+            String orderSummary = "Name of the Customer: " + name.getText().toString();
+            orderSummary += "\nPhone Number: " + phone.getText().toString();
+            orderSummary += "\nAddress: " + address.getText().toString();
+            orderSummary += "\nCity: " + city.getText().toString();
+            orderSummary += "\nPincode: " + pincode.getText().toString();
+            orderSummary += "\nProduct: " + productName;
+
+            if(colorSelected != null && !colorSelected.isEmpty()){
+                orderSummary += "\nColor: " + colorSelected;
+            }
+
+            orderSummary += "\nQuantity: " + quantity;
+            orderSummary += "\n\nPlease take immediate action";
+            orderSummary += "\nThank You!";
+
+            String emailAddress = "sales@deccanplast.com";
+            String emailSubject = "Order Request from Deccan Plast Mobile App";
+
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setType("*/*");
+            intent.setData(Uri.parse("mailto:"+emailAddress)); // only email apps should handle this
+            intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
+            intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
+            intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(intent,PICK_EMAIL_REQUEST);
+            }
         }
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            Intent orderCompletedIntent = new Intent(this, MainActivity.class);
+            startActivity(orderCompletedIntent);
     }
 
     @Override

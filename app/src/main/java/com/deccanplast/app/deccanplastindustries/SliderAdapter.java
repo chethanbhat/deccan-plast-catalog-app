@@ -6,19 +6,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by chethan on 25/7/17.
  */
 
 public class SliderAdapter extends PagerAdapter {
-    private int[] mSliderImageResouceId;
+    private int[] mSliderImageResourceId;
+    private String[] mSliderProductColorId;
     private LayoutInflater mInflater;
     private Context mContext;
+    private String colorCodeString;
 
-    public SliderAdapter(Context context, int[] sliderImageResouceId) {
+    public SliderAdapter(Context context, int[] sliderImageResourceId, String[] sliderProductColorId) {
         this.mContext = context;
-        this.mSliderImageResouceId = sliderImageResouceId;
+        this.mSliderImageResourceId = sliderImageResourceId;
+        this.mSliderProductColorId = sliderProductColorId;
         mInflater = LayoutInflater.from(context);
     }
 
@@ -29,7 +33,7 @@ public class SliderAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return mSliderImageResouceId.length;
+        return mSliderImageResourceId.length;
     }
 
     @Override
@@ -37,7 +41,12 @@ public class SliderAdapter extends PagerAdapter {
         View myImageLayout = mInflater.inflate(R.layout.slider, view, false);
         ImageView myImage = (ImageView) myImageLayout
                 .findViewById(R.id.image);
-        myImage.setImageResource(mSliderImageResouceId[position]);
+        myImage.setImageResource(mSliderImageResourceId[position]);
+
+        TextView colorCode = (TextView) myImageLayout.findViewById(R.id.colorCode);
+        colorCodeString = mContext.getText(R.string.colorCode) + mSliderProductColorId[position];
+        colorCode.setText(colorCodeString);
+
         view.addView(myImageLayout, 0);
         return myImageLayout;
     }

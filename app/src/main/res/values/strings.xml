@@ -3,7 +3,10 @@
     <string name="furniture_solutions">Furniture Solutions</string>
     <string name="mhs_solution">Material Handling Solutions</string>
     <string name="name_hint">Name</string>
-    <string name="phone_hint">+919535626988</string>
+    <string name="phone_hint">9845080722</string>
+    <string name="address_hint">6-B/1, Industrial Area, Baikampady</string>
+    <string name="city_hint">Mangalore</string>
+    <string name="pincode_hint">575011</string>
     <string name="quanity">Quantity</string>
     <string name="default_quantity">1</string>
     <string name="decrement_btn">-</string>
@@ -12,6 +15,15 @@
     <string name="submit_order">Submit Order</string>
     <string name="dimensions">Dimensions</string>
     <string name="features">Key Features</string>
+    <string name="colorsAvailable">Colors Available</string>
+
+    <string name="name_error">Please enter a valid name</string>
+    <string name="phone_error">Please enter a valid mobile number</string>
+    <string name="address_error">Please enter a valid address</string>
+    <string name="city_error">Please enter a valid city name</string>
+    <string name="pincode_error">Please enter a valid pincode (6 Digits)</string>
+
+    <string name="colorCode">Code: \u2002</string>
 
     <string name="premium_relax_chairs_features">\u25CF Ergonomic \n\u25CF Extremely Comfortable Design \n\u25CF Higher seat height \n\u25CF Excellent support for lumber and neck \n\u25CF Ideal for leisure seating</string>
     <string name="premium_relax_chairs_dimensions">(H) 936 mm, (W) 615 mm, (D) 740 mm</string>

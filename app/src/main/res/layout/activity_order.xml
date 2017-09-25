@@ -9,25 +9,88 @@
 
     <LinearLayout
         style="@style/RootLinear">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OrderLabels"
+            android:text="Customer Name"/>
 
         <EditText
             android:id="@+id/name"
             style="@style/OrderFields"
             android:hint="@string/name_hint" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OrderLabels"
+            android:text="Mobile Number (10 Digits only)"/>
+
         <EditText
             android:id="@+id/phone"
             style="@style/OrderFields"
-            android:hint="@string/phone_hint" />
+            android:hint="@string/phone_hint"
+            android:inputType="phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OrderLabels"
+            android:text="Address"/>
+
+        <EditText
+            android:id="@+id/address"
+            style="@style/OrderFields"
+            android:hint="@string/address_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OrderLabels"
+            android:text="City/Town"/>
+
+        <EditText
+            android:id="@+id/city"
+            style="@style/OrderFields"
+            android:hint="@string/city_hint" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/OrderLabels"
+            android:text="Pincode"/>
+
+        <EditText
+            android:id="@+id/pincode"
+            style="@style/OrderFields"
+            android:hint="@string/pincode_hint" />
+
 
         <TextView
             android:id="@+id/product"
             style="@style/OrderHeading"
+            android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-medium"/>
+
+        <TextView
+            android:id="@+id/colorsHeading"
+            style="@style/OrderHeading"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/colorsAvailable"/>
+
+        <Spinner
+            android:id="@+id/colorSpinner"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Spinner>
 
         <TextView
             style="@style/OrderHeading"
             android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="8dp"
             android:text="@string/quanity" />
 
         <LinearLayout

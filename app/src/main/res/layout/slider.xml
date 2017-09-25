@@ -3,9 +3,16 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
     <ImageView
         android:id="@+id/image"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:layout_gravity="center"
         android:scaleType="center"/>
+    <TextView
+        android:id="@+id/colorCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="center_horizontal"
+        style="@style/ColorCode"
+        android:text="Color: MBG"/>
 </FrameLayout>
