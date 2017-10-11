@@ -4,22 +4,33 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by chethan on 17/7/17.
+ * Class to represent various categories of Furnitures
+ * Every Category consists of a Category Code, Category Image and Category Bame
  */
 
 public class Category implements Parcelable {
 
+    // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
+    public static final Parcelable.Creator<Category> CREATOR = new Parcelable.Creator<Category>() {
+        public Category createFromParcel(Parcel in) {
+            return new Category(in);
+        }
+
+        public Category[] newArray(int size) {
+            return new Category[size];
+        }
+    };
     private int mCategoryCode;
     private int mCategoryImageId;
     private String mCategoryName;
 
-    public Category(int categoryCode,String categoryName, int categoryImageId) {
+    public Category(int categoryCode, String categoryName, int categoryImageId) {
         this.mCategoryCode = categoryCode;
         this.mCategoryName = categoryName;
         this.mCategoryImageId = categoryImageId;
     }
 
-    public Category(Parcel parcel){
+    public Category(Parcel parcel) {
         this.mCategoryCode = parcel.readInt();
         this.mCategoryName = parcel.readString();
         this.mCategoryImageId = parcel.readInt();
@@ -37,17 +48,6 @@ public class Category implements Parcelable {
         out.writeString(mCategoryName);
         out.writeInt(mCategoryImageId);
     }
-
-    // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
-    public static final Parcelable.Creator<Category> CREATOR = new Parcelable.Creator<Category>() {
-        public Category createFromParcel(Parcel in) {
-            return new Category(in);
-        }
-
-        public Category[] newArray(int size) {
-            return new Category[size];
-        }
-    };
 
     public int getmCategoryCode() {
         return mCategoryCode;

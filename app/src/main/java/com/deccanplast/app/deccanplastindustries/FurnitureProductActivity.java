@@ -10,6 +10,10 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * This class {@link FurnitureProductActivity} generates various list of products under selected Furniture Category from {@link FurnitureActivity}
+ */
+
 public class FurnitureProductActivity extends AppCompatActivity {
 
     @Override
@@ -29,7 +33,7 @@ public class FurnitureProductActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // product_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ProductAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
@@ -57,16 +61,16 @@ public class FurnitureProductActivity extends AppCompatActivity {
                 product.setmProductFeatures(getString(R.string.premium_relax_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_relax_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_relax_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_ferrari_1,R.drawable.s_ferrari_2,R.drawable.s_ferrari_3});
-                product.setmProductColors(new String[]{"DBR","DBK","TCO"});
+                product.setmProductSlider(new int[]{R.drawable.s_ferrari_1, R.drawable.s_ferrari_2, R.drawable.s_ferrari_3});
+                product.setmProductColors(new String[]{"DBR", "DBK", "TCO"});
                 break;
             case 10102:
                 product.setmProductCost(1215);
                 product.setmProductFeatures(getString(R.string.premium_relax_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_relax_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_relax_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_lotus_1,R.drawable.s_lotus_2,R.drawable.s_lotus_3});
-                product.setmProductColors(new String[]{"DBK","DBR","TCO"});
+                product.setmProductSlider(new int[]{R.drawable.s_lotus_1, R.drawable.s_lotus_2, R.drawable.s_lotus_3});
+                product.setmProductColors(new String[]{"DBK", "DBR", "TCO"});
                 break;
             case 10201:
                 product.setmProductCost(935);
@@ -74,8 +78,8 @@ public class FurnitureProductActivity extends AppCompatActivity {
                 product.setmProductFeatures(getString(R.string.premium_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_arm_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_buggati_1,R.drawable.s_buggati_2,R.drawable.s_buggati_3});
-                product.setmProductColors(new String[]{"RWD","PWD","MHG"});
+                product.setmProductSlider(new int[]{R.drawable.s_buggati_1, R.drawable.s_buggati_2, R.drawable.s_buggati_3});
+                product.setmProductColors(new String[]{"RWD", "PWD", "MHG"});
                 break;
             case 10202:
                 product.setmProductCost(935);
@@ -83,264 +87,267 @@ public class FurnitureProductActivity extends AppCompatActivity {
                 product.setmProductFeatures(getString(R.string.premium_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_arm_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_bently_1,R.drawable.s_bently_5,R.drawable.s_bently_6,R.drawable.s_bently_7,R.drawable.s_bently_8});
-                product.setmProductColors(new String[]{"PBG","YLW","RED","TCO","DBK"});
+                product.setmProductSlider(new int[]{R.drawable.s_bently_1, R.drawable.s_bently_5, R.drawable.s_bently_6, R.drawable.s_bently_7, R.drawable.s_bently_8});
+                product.setmProductColors(new String[]{"PBG", "YLW", "RED", "TCO", "DBK"});
                 break;
             case 10301:
                 product.setmProductCost(820);
                 product.setmProductFeatures(getString(R.string.premium_high_back_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_high_back_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_high_back_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_lexus_1,R.drawable.s_lexus_2,R.drawable.s_lexus_3,R.drawable.s_lexus_4});
-                product.setmProductColors(new String[]{"DBK","MBG","TCO","DBR"});
+                product.setmProductSlider(new int[]{R.drawable.s_lexus_1, R.drawable.s_lexus_2, R.drawable.s_lexus_3, R.drawable.s_lexus_4});
+                product.setmProductColors(new String[]{"DBK", "MBG", "TCO", "DBR"});
                 break;
             case 10302:
                 product.setmProductCost(820);
                 product.setmProductFeatures(getString(R.string.premium_high_back_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_high_back_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_high_back_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_porsche_2,R.drawable.s_porsche_3,R.drawable.s_porsche_4,R.drawable.s_porsche_5});
-                product.setmProductColors(new String[]{"WNT","RWD","MHG","SWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_porsche_2, R.drawable.s_porsche_3, R.drawable.s_porsche_4, R.drawable.s_porsche_5});
+                product.setmProductColors(new String[]{"WNT", "RWD", "MHG", "SWD"});
                 break;
             case 10303:
                 product.setmProductCost(820);
                 product.setmProductFeatures(getString(R.string.premium_high_back_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_high_back_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_high_back_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_mercedes_1,R.drawable.s_mercedes_2,R.drawable.s_mercedes_3});
-                product.setmProductColors(new String[]{"DBR","TCO","DBK"});
+                product.setmProductSlider(new int[]{R.drawable.s_mercedes_1, R.drawable.s_mercedes_2, R.drawable.s_mercedes_3});
+                product.setmProductColors(new String[]{"DBR", "TCO", "DBK"});
                 break;
             case 10401:
                 product.setmProductCost(665);
                 product.setmProductFeatures(getString(R.string.premium_dining_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_dining_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_dining_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_brezza_1,R.drawable.s_brezza_2,R.drawable.s_brezza_4,R.drawable.s_brezza_6});
-                product.setmProductColors(new String[]{"DBR","RWD","TCO","DBK"});
+                product.setmProductSlider(new int[]{R.drawable.s_brezza_1, R.drawable.s_brezza_2, R.drawable.s_brezza_4, R.drawable.s_brezza_6});
+                product.setmProductColors(new String[]{"DBR", "RWD", "TCO", "DBK"});
                 break;
             case 10402:
                 product.setmProductCost(665);
                 product.setmProductFeatures(getString(R.string.premium_dining_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_dining_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_dining_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_hexa_1,R.drawable.s_hexa_2,R.drawable.s_hexa_3,R.drawable.s_hexa_4,R.drawable.s_hexa_5,R.drawable.s_hexa_6,R.drawable.s_hexa_7,R.drawable.s_hexa_8});
-                product.setmProductColors(new String[]{"YLW","CGN","CPK","ORG","RED","CBL","WHD","DBK"});
+                product.setmProductSlider(new int[]{R.drawable.s_hexa_1, R.drawable.s_hexa_2, R.drawable.s_hexa_3, R.drawable.s_hexa_4, R.drawable.s_hexa_5, R.drawable.s_hexa_6, R.drawable.s_hexa_7, R.drawable.s_hexa_8});
+                product.setmProductColors(new String[]{"YLW", "CGN", "CPK", "ORG", "RED", "CBL", "WHD", "DBK"});
                 break;
             case 10403:
                 product.setmProductCost(665);
                 product.setmProductFeatures(getString(R.string.premium_dining_chairs_features));
                 product.setmProductDimensions(getString(R.string.premium_dining_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.premium_dining_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_crysta_1,R.drawable.s_crysta_2,R.drawable.s_crysta_3,R.drawable.s_crysta_4,R.drawable.s_crysta_5,R.drawable.s_crysta_6});
-                product.setmProductColors(new String[]{"RWD","PWD","MHG","TCO","DBR","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_crysta_1, R.drawable.s_crysta_2, R.drawable.s_crysta_3, R.drawable.s_crysta_4, R.drawable.s_crysta_5, R.drawable.s_crysta_6});
+                product.setmProductColors(new String[]{"RWD", "PWD", "MHG", "TCO", "DBR", "RED"});
                 break;
             case 10501:
                 product.setmProductCost(635);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_a));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_camry_1,R.drawable.s_camry_2,R.drawable.s_camry_3,R.drawable.s_camry_4});
-                product.setmProductColors(new String[]{"MHG","PWD","RWD","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_camry_1, R.drawable.s_camry_2, R.drawable.s_camry_3, R.drawable.s_camry_4});
+                product.setmProductColors(new String[]{"MHG", "PWD", "RWD", "RED"});
                 break;
             case 10502:
                 product.setmProductCost(635);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_a));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_accord_1,R.drawable.s_accord_2,R.drawable.s_accord_3});
-                product.setmProductColors(new String[]{"RWD","MBG","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_accord_1, R.drawable.s_accord_2, R.drawable.s_accord_3});
+                product.setmProductColors(new String[]{"RWD", "MBG", "RED"});
                 break;
             case 10503:
                 product.setmProductCost(635);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_a));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_amaze_1,R.drawable.s_amaze_2,R.drawable.s_amaze_3});
-                product.setmProductColors(new String[]{"MBG","RWD","SWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_amaze_1, R.drawable.s_amaze_2, R.drawable.s_amaze_3});
+                product.setmProductColors(new String[]{"MBG", "RWD", "SWD"});
                 break;
             case 10504:
                 product.setmProductCost(555);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_b));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_eon_1,R.drawable.s_eon_2,R.drawable.s_eon_3,R.drawable.s_eon_4});
-                product.setmProductColors(new String[]{"MHG","MBG","SWD","RWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_eon_1, R.drawable.s_eon_2, R.drawable.s_eon_3, R.drawable.s_eon_4});
+                product.setmProductColors(new String[]{"MHG", "MBG", "SWD", "RWD"});
                 break;
             case 10505:
                 product.setmProductCost(555);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_b));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_brio_1,R.drawable.s_brio_2,R.drawable.s_brio_3,R.drawable.s_brio_4,R.drawable.s_brio_5});
-                product.setmProductColors(new String[]{"RWD","PWD","MHG","MBG","WHT"});
+                product.setmProductSlider(new int[]{R.drawable.s_brio_1, R.drawable.s_brio_2, R.drawable.s_brio_3, R.drawable.s_brio_4, R.drawable.s_brio_5});
+                product.setmProductColors(new String[]{"RWD", "PWD", "MHG", "MBG", "WHT"});
                 break;
             case 10506:
                 product.setmProductCost(555);
                 product.setmProductFeatures(getString(R.string.midback_arm_chairs_features));
                 product.setmProductDimensions(getString(R.string.midback_arm_chairs_dimensions_b));
                 product.setmProductRecommendations(getString(R.string.midback_arm_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_up_1,R.drawable.s_up_2,R.drawable.s_up_3,R.drawable.s_up_4});
-                product.setmProductColors(new String[]{"RWD","PWD","MHG","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_up_1, R.drawable.s_up_2, R.drawable.s_up_3, R.drawable.s_up_4});
+                product.setmProductColors(new String[]{"RWD", "PWD", "MHG", "RED"});
                 break;
             case 10601:
                 product.setmProductCost(530);
                 product.setmProductFeatures(getString(R.string.high_back_dining_chairs_features));
                 product.setmProductDimensions(getString(R.string.high_back_dining_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.high_back_dining_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_figo_1,R.drawable.s_figo_2,R.drawable.s_figo_3,R.drawable.s_figo_4,R.drawable.s_figo_5,R.drawable.s_figo_6,R.drawable.s_figo_7,R.drawable.s_figo_8});
-                product.setmProductColors(new String[]{"PWD","CGN","MHG","RED","PBL","ORG","MBG","RWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_figo_1, R.drawable.s_figo_2, R.drawable.s_figo_3, R.drawable.s_figo_4, R.drawable.s_figo_5, R.drawable.s_figo_6, R.drawable.s_figo_7, R.drawable.s_figo_8});
+                product.setmProductColors(new String[]{"PWD", "CGN", "MHG", "RED", "PBL", "ORG", "MBG", "RWD"});
                 break;
             case 10602:
                 product.setmProductCost(530);
                 product.setmProductFeatures(getString(R.string.high_back_dining_chairs_features));
                 product.setmProductDimensions(getString(R.string.high_back_dining_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.high_back_dining_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_polo_1,R.drawable.s_polo_2,R.drawable.s_polo_3,R.drawable.s_polo_4});
-                product.setmProductColors(new String[]{"RED","RWD","SWD","PWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_polo_1, R.drawable.s_polo_2, R.drawable.s_polo_3, R.drawable.s_polo_4});
+                product.setmProductColors(new String[]{"RED", "RWD", "SWD", "PWD"});
                 break;
             case 10701:
                 product.setmProductCost(540);
                 product.setmProductFeatures(getString(R.string.armless_chairs_features));
                 product.setmProductDimensions(getString(R.string.armless_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.armless_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_nano_1,R.drawable.s_nano_2,R.drawable.s_nano_3});
-                product.setmProductColors(new String[]{"RED","PBL","YLW"});
+                product.setmProductSlider(new int[]{R.drawable.s_nano_1, R.drawable.s_nano_2, R.drawable.s_nano_3});
+                product.setmProductColors(new String[]{"RED", "PBL", "YLW"});
                 break;
             case 10801:
                 product.setmProductCost(1950);
                 product.setmProductFeatures(getString(R.string.dining_table_features));
                 product.setmProductDimensions(getString(R.string.dining_table_dimensions));
                 product.setmProductRecommendations(getString(R.string.dining_table_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_mangalore_dining_1,R.drawable.s_mangalore_dining_2,R.drawable.s_mangalore_dining_3,R.drawable.s_mangalore_dining_4,R.drawable.s_mangalore_dining_5});
-                product.setmProductColors(new String[]{"PWD","MHG","RED","MBG","RWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_mangalore_dining_1, R.drawable.s_mangalore_dining_2, R.drawable.s_mangalore_dining_3, R.drawable.s_mangalore_dining_4, R.drawable.s_mangalore_dining_5});
+                product.setmProductColors(new String[]{"PWD", "MHG", "RED", "MBG", "RWD"});
                 break;
             case 10802:
                 product.setmProductCost(1695);
                 product.setmProductFeatures(getString(R.string.dining_table_features));
                 product.setmProductDimensions(getString(R.string.dining_table_dimensions));
                 product.setmProductRecommendations(getString(R.string.dining_table_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_calicut_round_1,R.drawable.s_calicut_round_2,R.drawable.s_calicut_round_3});
-                product.setmProductColors(new String[]{"TCO","DBR","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_calicut_round_1, R.drawable.s_calicut_round_2, R.drawable.s_calicut_round_3});
+                product.setmProductColors(new String[]{"TCO", "DBR", "RED"});
                 break;
             case 10901:
                 product.setmProductCost(930);
                 product.setmProductFeatures(getString(R.string.innova_table_features));
                 product.setmProductDimensions(getString(R.string.innova_table_dimensions));
                 product.setmProductRecommendations(getString(R.string.innova_table_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_innova_1,R.drawable.s_innova_2,R.drawable.s_innova_3,R.drawable.s_innova_4,R.drawable.s_innova_5});
-                product.setmProductColors(new String[]{"MHG","PWD","RWD","DBK","TCO"});
+                product.setmProductSlider(new int[]{R.drawable.s_innova_1, R.drawable.s_innova_2, R.drawable.s_innova_3, R.drawable.s_innova_4, R.drawable.s_innova_5});
+                product.setmProductColors(new String[]{"MHG", "PWD", "RWD", "DBK", "TCO"});
                 break;
             case 10902:
                 product.setmProductCost(860);
                 product.setmProductFeatures(getString(R.string.swift_table_features));
                 product.setmProductDimensions(getString(R.string.swift_table_dimensions));
                 product.setmProductRecommendations(getString(R.string.swift_table_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_swift_1,R.drawable.s_swift_2,R.drawable.s_swift_3});
-                product.setmProductColors(new String[]{"PWD","MBG","RWD"});
+                product.setmProductSlider(new int[]{R.drawable.s_swift_1, R.drawable.s_swift_2, R.drawable.s_swift_3});
+                product.setmProductColors(new String[]{"PWD", "MBG", "RWD"});
                 break;
             case 11001:
                 product.setmProductCost(1700);
                 product.setmProductFeatures(getString(R.string.multi_seating_features));
                 product.setmProductDimensions(getString(R.string.multi_seating_dimensions));
                 product.setmProductRecommendations(getString(R.string.multi_seating_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_ritz_1,R.drawable.s_ritz_2,R.drawable.s_ritz_3,R.drawable.s_ritz_4,R.drawable.s_ritz_5});
-                product.setmProductColors(new String[]{"SINGLE","CONF","STUDY","RACK","WHEEL"});
+                product.setmProductSlider(new int[]{R.drawable.s_ritz_1, R.drawable.s_ritz_2, R.drawable.s_ritz_3, R.drawable.s_ritz_4, R.drawable.s_ritz_5});
+                product.setmProductColors(new String[]{"CBL", "YEL", "RED", "ORG", "BLK", "WBR"});
                 break;
             case 11101:
                 product.setmProductCost(325);
                 product.setmProductFeatures(getString(R.string.mini_relax_chairs_features));
                 product.setmProductDimensions(getString(R.string.mini_relax_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.mini_relax_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_ferrari_mini_1,R.drawable.s_ferrari_mini_2,R.drawable.s_ferrari_mini_3,R.drawable.s_ferrari_mini_4,R.drawable.s_ferrari_mini_5});
-                product.setmProductColors(new String[]{"RED","CBL","CPK","YLW","ORG"});
+                product.setmProductSlider(new int[]{R.drawable.s_ferrari_mini_1, R.drawable.s_ferrari_mini_2, R.drawable.s_ferrari_mini_3, R.drawable.s_ferrari_mini_4, R.drawable.s_ferrari_mini_5});
+                product.setmProductColors(new String[]{"RED", "CBL", "CPK", "YLW", "ORG"});
                 break;
             case 11102:
                 product.setmProductCost(325);
                 product.setmProductFeatures(getString(R.string.mini_relax_chairs_features));
                 product.setmProductDimensions(getString(R.string.mini_relax_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.mini_relax_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_lotus_mini_1,R.drawable.s_lotus_mini_2,R.drawable.s_lotus_mini_3,R.drawable.s_lotus_mini_4,R.drawable.s_lotus_mini_5,R.drawable.s_lotus_mini_6});
-                product.setmProductColors(new String[]{"RED","CBL","YLW","ORG","CBL","CPK"});
+                product.setmProductSlider(new int[]{R.drawable.s_lotus_mini_1, R.drawable.s_lotus_mini_2, R.drawable.s_lotus_mini_3, R.drawable.s_lotus_mini_4, R.drawable.s_lotus_mini_5, R.drawable.s_lotus_mini_6});
+                product.setmProductColors(new String[]{"RED", "CBL", "YLW", "ORG", "CBL", "CPK"});
                 break;
             case 11103:
                 product.setmProductCost(325);
                 product.setmProductFeatures(getString(R.string.mini_relax_chairs_features));
                 product.setmProductDimensions(getString(R.string.mini_relax_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.mini_relax_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_noble_mini_1,R.drawable.s_noble_mini_2,R.drawable.s_noble_mini_3,R.drawable.s_noble_mini_4});
-                product.setmProductColors(new String[]{"YLW","CPK","RED","ORG"});
+                product.setmProductSlider(new int[]{R.drawable.s_noble_mini_1, R.drawable.s_noble_mini_2, R.drawable.s_noble_mini_3, R.drawable.s_noble_mini_4});
+                product.setmProductColors(new String[]{"YLW", "CPK", "RED", "ORG"});
                 break;
             case 11201:
                 product.setmProductCost(185);
                 product.setmProductFeatures(getString(R.string.baby_chairs_features));
                 product.setmProductDimensions(getString(R.string.baby_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.baby_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_baby_eon_1,R.drawable.s_baby_eon_2,R.drawable.s_baby_eon_3,R.drawable.s_baby_eon_4,R.drawable.s_baby_eon_5});
-                product.setmProductColors(new String[]{"CBL","CGN","ORG","RED","CPK"});
+                product.setmProductSlider(new int[]{R.drawable.s_baby_eon_1, R.drawable.s_baby_eon_2, R.drawable.s_baby_eon_3, R.drawable.s_baby_eon_4, R.drawable.s_baby_eon_5});
+                product.setmProductColors(new String[]{"CBL", "CGN", "ORG", "RED", "CPK"});
                 break;
             case 11202:
                 product.setmProductCost(185);
                 product.setmProductFeatures(getString(R.string.baby_chairs_features));
                 product.setmProductDimensions(getString(R.string.baby_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.baby_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_baby_abcd_1,R.drawable.s_baby_abcd_2,R.drawable.s_baby_abcd_3,R.drawable.s_baby_abcd_4,R.drawable.s_baby_abcd_5});
-                product.setmProductColors(new String[]{"YLW","CPK","CGN","PBL","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_baby_abcd_1, R.drawable.s_baby_abcd_2, R.drawable.s_baby_abcd_3, R.drawable.s_baby_abcd_4, R.drawable.s_baby_abcd_5});
+                product.setmProductColors(new String[]{"YLW", "CPK", "CGN", "PBL", "RED"});
                 break;
             case 11203:
                 product.setmProductCost(185);
                 product.setmProductFeatures(getString(R.string.baby_chairs_features));
                 product.setmProductDimensions(getString(R.string.baby_chairs_dimensions));
                 product.setmProductRecommendations(getString(R.string.baby_chairs_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_baby_up_1,R.drawable.s_baby_up_2,R.drawable.s_baby_up_3,R.drawable.s_baby_up_4,R.drawable.s_baby_up_5});
-                product.setmProductColors(new String[]{"CBL","ORG","CPK","CGN","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_baby_up_1, R.drawable.s_baby_up_2, R.drawable.s_baby_up_3, R.drawable.s_baby_up_4, R.drawable.s_baby_up_5});
+                product.setmProductColors(new String[]{"CBL", "ORG", "CPK", "CGN", "RED"});
                 break;
             case 11301:
                 product.setmProductCost(550);
                 product.setmProductFeatures(getString(R.string.rocker_toy_features));
                 product.setmProductDimensions(getString(R.string.rocker_toy_dimensions));
                 product.setmProductRecommendations(getString(R.string.rocker_toy_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_baby_rocker_1,R.drawable.s_baby_rocker_2});
-                product.setmProductColors(new String[]{"RED|YLW","RED|CBL"});
+                product.setmProductSlider(new int[]{R.drawable.s_baby_rocker_1, R.drawable.s_baby_rocker_2});
+                product.setmProductColors(new String[]{"RED|YLW", "RED|CBL"});
                 break;
             case 11401:
                 product.setmProductCost(360);
                 product.setmProductFeatures(getString(R.string.pulsar_stool_features));
                 product.setmProductDimensions(getString(R.string.pulsar_stool_dimensions));
                 product.setmProductRecommendations(getString(R.string.pulsar_stool_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_pulsar_1,R.drawable.s_pulsar_2,R.drawable.s_pulsar_3,R.drawable.s_pulsar_4,R.drawable.s_pulsar_5,R.drawable.s_pulsar_6,R.drawable.s_pulsar_7});
-                product.setmProductColors(new String[]{"RED","CGN","YLW","MBG","ORG","CPK","CBL"});
+                product.setmProductSlider(new int[]{R.drawable.s_pulsar_1, R.drawable.s_pulsar_2, R.drawable.s_pulsar_3, R.drawable.s_pulsar_4, R.drawable.s_pulsar_5, R.drawable.s_pulsar_6, R.drawable.s_pulsar_7});
+                product.setmProductColors(new String[]{"RED", "CGN", "YLW", "MBG", "ORG", "CPK", "CBL"});
                 break;
             case 11402:
                 product.setmProductCost(260);
                 product.setmProductFeatures(getString(R.string.activa_stool_features));
                 product.setmProductDimensions(getString(R.string.activa_stool_dimensions));
                 product.setmProductRecommendations(getString(R.string.activa_stool_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_activa_1,R.drawable.s_activa_2,R.drawable.s_activa_3,R.drawable.s_activa_4,R.drawable.s_activa_5,R.drawable.s_activa_6,R.drawable.s_activa_7,R.drawable.s_activa_8});
-                product.setmProductColors(new String[]{"YLW","ORG","RED","RWD","PWD","CBL","MBG","CPK"});
+                product.setmProductSlider(new int[]{R.drawable.s_activa_1, R.drawable.s_activa_2, R.drawable.s_activa_3, R.drawable.s_activa_4, R.drawable.s_activa_5, R.drawable.s_activa_6, R.drawable.s_activa_7, R.drawable.s_activa_8});
+                product.setmProductColors(new String[]{"YLW", "ORG", "RED", "RWD", "PWD", "CBL", "MBG", "CPK"});
                 break;
             case 11403:
                 product.setmProductCost(350);
                 product.setmProductFeatures(getString(R.string.rattan_stool_features));
                 product.setmProductDimensions(getString(R.string.rattan_stool_dimensions));
                 product.setmProductRecommendations(getString(R.string.rattan_stool_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_maestro_1,R.drawable.s_maestro_2,R.drawable.s_maestro_3,R.drawable.s_maestro_5,R.drawable.s_maestro_6});
-                product.setmProductColors(new String[]{"DBR","MBG","CBL","TCO","RED"});
+                product.setmProductSlider(new int[]{R.drawable.s_maestro_1, R.drawable.s_maestro_2, R.drawable.s_maestro_3, R.drawable.s_maestro_5, R.drawable.s_maestro_6});
+                product.setmProductColors(new String[]{"DBR", "MBG", "CBL", "TCO", "RED"});
                 break;
             case 11404:
                 product.setmProductCost(160);
                 product.setmProductFeatures(getString(R.string.pleasure_stool_features));
                 product.setmProductDimensions(getString(R.string.pleasure_stool_dimensions));
                 product.setmProductRecommendations(getString(R.string.pleasure_stool_recommendations));
-                product.setmProductSlider(new int[]{R.drawable.s_pleasure_1,R.drawable.s_pleasure_2,R.drawable.s_pleasure_3,R.drawable.s_pleasure_5});
-                product.setmProductColors(new String[]{"CBL","ORG","CPK","YLW"});
+                product.setmProductSlider(new int[]{R.drawable.s_pleasure_1, R.drawable.s_pleasure_2, R.drawable.s_pleasure_3, R.drawable.s_pleasure_5});
+                product.setmProductColors(new String[]{"CBL", "ORG", "CPK", "YLW"});
                 break;
         }
 
         Intent activityIntent = new Intent(getApplicationContext(), activityClass);
-        activityIntent.putExtra("product",product);
+        activityIntent.putExtra("product", product);
         startActivity(activityIntent);
     }
 
+    /**
+     * This method manages back button in the Toolbar / App Bar
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

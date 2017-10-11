@@ -18,21 +18,21 @@ public class MHSActivity extends AppCompatActivity {
 
         ArrayList<Category> categories = new ArrayList<>();
 
-        // Create a list of words
-        categories.add(new Category(20101,"JCDW Double Wall Crate", R.drawable.jcdw_double_wall));
-        categories.add(new Category(20201,"JCSW Single Wall Crate",R.drawable.jcsw_single_wall));
-        categories.add(new Category(20301,"JCSWH Single Wall Crate (Handle)",R.drawable.jcsw_handle));
-        categories.add(new Category(20401,"MP21 Utility Crate",R.drawable.mp21));
-        categories.add(new Category(20501,"MP22 Utility Crate",R.drawable.mp22));
-        categories.add(new Category(20601,"MP01 Multipurpose Crate",R.drawable.multipurpose_crate));
-        categories.add(new Category(20701,"MP11 Mini Veg Crate",R.drawable.mp11_mini));
-        categories.add(new Category(20801,"MP12 Mini Veg Crate",R.drawable.mp12));
-        categories.add(new Category(20901,"BC01 Bottle Crate",R.drawable.bottle_crate));
-        categories.add(new Category(20101,"Sindhushree 25 Jalli Butti",R.drawable.sindhushree_25));
-        categories.add(new Category(21101,"Sindhushree 21 Jalli Butti",R.drawable.sindhushree_21));
-        categories.add(new Category(21201,"Sindhushree 18 Jalli Butti",R.drawable.sindhushree_18));
-        categories.add(new Category(21301,"Jayashree Butti",R.drawable.jayashree));
-        categories.add(new Category(21401,"Buckets",R.drawable.bucket));
+        // Create a list of products in Material Handling Solutions Category
+        categories.add(new Category(20101, "JCDW Double Wall Crate", R.drawable.jcdw_double_wall));
+        categories.add(new Category(20201, "JCSW Single Wall Crate", R.drawable.jcsw_single_wall));
+        categories.add(new Category(20301, "JCSWH Single Wall Crate (Handle)", R.drawable.jcsw_handle));
+        categories.add(new Category(20401, "MP21 Utility Crate", R.drawable.mp21));
+        categories.add(new Category(20501, "MP22 Utility Crate", R.drawable.mp22));
+        categories.add(new Category(20601, "MP01 Multipurpose Crate", R.drawable.multipurpose_crate));
+        categories.add(new Category(20701, "MP11 Mini Veg Crate", R.drawable.mp11_mini));
+        categories.add(new Category(20801, "MP12 Mini Veg Crate", R.drawable.mp12));
+        categories.add(new Category(20901, "BC01 Bottle Crate", R.drawable.bottle_crate));
+        categories.add(new Category(20101, "Sindhushree 25 Jalli Butti", R.drawable.sindhushree_25));
+        categories.add(new Category(21101, "Sindhushree 21 Jalli Butti", R.drawable.sindhushree_21));
+        categories.add(new Category(21201, "Sindhushree 18 Jalli Butti", R.drawable.sindhushree_18));
+        categories.add(new Category(21301, "Jayashree Butti", R.drawable.jayashree));
+        categories.add(new Category(21401, "Buckets", R.drawable.bucket));
 
         // Create an {@link ProductAdapter}, whose data source is a list of {@link Product}s. The
         // adapter knows how to create list items for each item in the list.
@@ -41,7 +41,7 @@ public class MHSActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // product_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ProductAdapter} we created above, so that the
         // {@link ListView} will display list items for each {@link Word} in the list.
@@ -56,6 +56,12 @@ public class MHSActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * This method generates the {@link ProductPageActivity} for product selected from the list view
+     *
+     * @param position refers to the position of the selected product in the list view
+     */
 
     public void generateActivity(int position) {
 
@@ -209,9 +215,9 @@ public class MHSActivity extends AppCompatActivity {
         }
 
         Intent activityIntent = new Intent(getApplicationContext(), activityClass);
-        activityIntent.putExtra("product",product);
-        activityIntent.putExtra("activityTitle",activityTitle);
-        activityIntent.putExtra("activityParent",activityParent);
+        activityIntent.putExtra("product", product);
+        activityIntent.putExtra("activityTitle", activityTitle);
+        activityIntent.putExtra("activityParent", activityParent);
         startActivity(activityIntent);
     }
 }

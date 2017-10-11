@@ -19,10 +19,9 @@ import com.basgeekball.awesomevalidation.ValidationStyle;
 
 public class OrderActivity extends AppCompatActivity {
 
+    static final int PICK_EMAIL_REQUEST = 1;  // The request code
     private int quantity = 1;
     private String productName;
-    private AwesomeValidation awesomeValidation;
-    static final int PICK_EMAIL_REQUEST = 1;  // The request code
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,28 +33,27 @@ public class OrderActivity extends AppCompatActivity {
 
         final Product currentProduct = orderIntent.getParcelableExtra("product");
 
-        productName = "Product Name: " +  currentProduct.getmProductName();
+        productName = "Product Name: " + currentProduct.getmProductName();
 
-        if(currentProduct.hasColors())
-        {
+        // Display a drop down list of Product Colors if available
+        if (currentProduct.hasColors()) {
+            // Create a spinner widget
             Spinner spinner = findViewById(R.id.colorSpinner);
-
-            // Create an ArrayAdapter using the string array and a default spinner layout
+            // Create an ArrayAdapter using the string array (Array of Product Colors) and a default spinner layout
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, currentProduct.getmProductColors());
             // Apply the adapter to the spinner
             spinner.setAdapter(adapter);
-
-        }else {
+        } else {
             findViewById(R.id.colorsHeading).setVisibility(View.GONE);
             findViewById(R.id.colorSpinner).setVisibility(View.GONE);
         }
 
-        TextView productNameTextView = (TextView)findViewById(R.id.product);
+        TextView productNameTextView = findViewById(R.id.product);
         productNameTextView.setText(productName);
 
-        Button incrementButton = (Button)(findViewById(R.id.increment_button));
-        Button decrementButton = (Button)(findViewById(R.id.decrement_button));
-        Button submitButton = (Button)findViewById(R.id.submit_button);
+        Button incrementButton = findViewById(R.id.increment_button);
+        Button decrementButton = findViewById(R.id.decrement_button);
+        Button submitButton = findViewById(R.id.submit_button);
 
         incrementButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,35 +77,32 @@ public class OrderActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     /**
+     * Increment Quantity Method
      * This method is called when the plus button is clicked.
      */
     public void increment() {
-        if(quantity<100)
-        {
+        if (quantity < 100) {
             quantity = quantity + 1;
             displayQuantity(quantity);
-        }
-        else{
+        } else {
             createToast("Sorry, maximum limit is 100 nos per product !");
         }
 
     }
 
     /**
+     * Decrement Quantity Method
      * This method is called when the minus button is clicked.
      */
     public void decrement() {
-        if(quantity>1)
-        {
+        if (quantity > 1) {
             quantity = quantity - 1;
             displayQuantity(quantity);
 
-        }
-        else{
+        } else {
             createToast("You can't order less than 1 item");
         }
 
@@ -115,8 +110,8 @@ public class OrderActivity extends AppCompatActivity {
 
     /**
      * Creates toast message for increment and decrement
-     * @param message indicates toast message.
      *
+     * @param message indicates toast message.
      */
     private void createToast(String message) {
 
@@ -132,18 +127,21 @@ public class OrderActivity extends AppCompatActivity {
      */
     public void displayQuantity(int number) {
 
-        TextView quantityTextView =(TextView)findViewById(R.id.quantity_text_view);
+        TextView quantityTextView = findViewById(R.id.quantity_text_view);
         quantityTextView.setText(String.valueOf(number));
 
     }
 
-    public boolean validateInfo(){
+    /**
+     * This method validates the fields of the Enquiry/Order Form
+     */
+    public boolean validateInfo() {
 
-        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+        AwesomeValidation awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
 
         awesomeValidation.addValidation(this, R.id.name, "^[A-Za-z\\s]{1,}[\\.]{0,1}[A-Za-z\\s]{0,}$", R.string.name_error);
         awesomeValidation.addValidation(this, R.id.phone, "((\\+*)((0[ -]+)*|(91 )*)(\\d{12}+|\\d{10}+))|\\d{5}([- ]*)\\d{6}", R.string.phone_error);
-        awesomeValidation.addValidation(this, R.id.address,"[a-zA-Z0-9.\\[\\]()\\s,\\/\\\\-]+", R.string.address_error);
+        awesomeValidation.addValidation(this, R.id.address, "[a-zA-Z0-9.\\[\\]()\\s,\\/\\\\-]+", R.string.address_error);
         awesomeValidation.addValidation(this, R.id.city, "[a-zA-Z\\s]+", R.string.city_error);
         awesomeValidation.addValidation(this, R.id.pincode, "[0-9]{6}", R.string.pincode_error);
 
@@ -152,33 +150,31 @@ public class OrderActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method submits the Enquiry/Order as an external intent to the e-mail app
+     */
     public void submitOrder() {
 
-        if(validateInfo())
-        {
+        if (validateInfo()) {
             String colorSelected = "";
-            EditText name = (EditText) findViewById(R.id.name);
-            EditText phone = (EditText) findViewById(R.id.phone);
-            EditText address = (EditText)findViewById(R.id.address);
-            EditText city = (EditText)findViewById(R.id.city);
-            EditText pincode = (EditText)findViewById(R.id.pincode);
-            if(findViewById(R.id.colorSpinner).getVisibility() == View.VISIBLE)
-            {
-                Spinner color = (Spinner)findViewById(R.id.colorSpinner);
-                colorSelected = color.getItemAtPosition(color.getSelectedItemPosition()).toString() ;
+            EditText name = findViewById(R.id.name);
+            EditText phone = findViewById(R.id.phone);
+            EditText address = findViewById(R.id.address);
+            EditText city = findViewById(R.id.city);
+            EditText pincode = findViewById(R.id.pincode);
+            if (findViewById(R.id.colorSpinner).getVisibility() == View.VISIBLE) {
+                Spinner color = findViewById(R.id.colorSpinner);
+                colorSelected = color.getItemAtPosition(color.getSelectedItemPosition()).toString();
             }
-
-
-
 
             String orderSummary = "Name of the Customer: " + name.getText().toString();
             orderSummary += "\nPhone Number: " + phone.getText().toString();
             orderSummary += "\nAddress: " + address.getText().toString();
             orderSummary += "\nCity: " + city.getText().toString();
             orderSummary += "\nPincode: " + pincode.getText().toString();
-            orderSummary += "\nProduct: " + productName;
+            orderSummary += "\n" + productName;
 
-            if(colorSelected != null && !colorSelected.isEmpty()){
+            if (colorSelected != null && !colorSelected.isEmpty()) {
                 orderSummary += "\nColor: " + colorSelected;
             }
 
@@ -187,28 +183,32 @@ public class OrderActivity extends AppCompatActivity {
             orderSummary += "\nThank You!";
 
             String emailAddress = "sales@deccanplast.com";
-            String emailSubject = "Order Request from Deccan Plast Mobile App";
+            String emailSubject = "Enquiry from Deccan Plast Mobile App";
 
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setType("*/*");
-            intent.setData(Uri.parse("mailto:"+emailAddress)); // only email apps should handle this
+            intent.setData(Uri.parse("mailto:" + emailAddress)); // only email apps should handle this
             intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
             intent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
             intent.putExtra(Intent.EXTRA_TEXT, orderSummary);
             if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivityForResult(intent,PICK_EMAIL_REQUEST);
+                startActivityForResult(intent, PICK_EMAIL_REQUEST);
             }
         }
-
-
     }
 
+    /**
+     * This method goes to the Home screen or Main Activity after Ordering is completed.
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            Intent orderCompletedIntent = new Intent(this, MainActivity.class);
-            startActivity(orderCompletedIntent);
+        Intent orderCompletedIntent = new Intent(this, MainActivity.class);
+        startActivity(orderCompletedIntent);
     }
 
+    /**
+     * This method manages back button in the Toolbar / App Bar
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

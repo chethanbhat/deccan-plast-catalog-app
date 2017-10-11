@@ -11,14 +11,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by chethan on 17/7/17.
+ * Category Adapter to generates categories to be displayed
+ * in list view in corresponding to {@link FurnitureActivity}
  */
 
 public class CategoryAdapter extends ArrayAdapter<Category> {
     /**
      * Create a new {@link CategoryAdapter} object.
      *
-     * @param context is the current context (i.e. Activity) that the adapter is being created in.
+     * @param context    is the current context (i.e. Activity) that the adapter is being created in.
      * @param categories is the list of {@link Category}s to be displayed.
      */
     public CategoryAdapter(Context context, ArrayList<Category> categories) {
@@ -28,10 +29,10 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
 
@@ -44,22 +45,21 @@ public class CategoryAdapter extends ArrayAdapter<Category> {
                     R.layout.list_item, parent, false);
         }
 
-        // Get the {@link Product} object located at this position in the list
+        // Get the {@link Category} object located at this position in the list
         Category currentCategory = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
-        TextView categoryName = (TextView) listItemView.findViewById(R.id.list_item_name);
-        // Get the Product Name from the current Product object and set this text on
-        // the product_name TextView.
+        // Find the TextView in the list_item.xml layout with the ID list_item_name
+        TextView categoryName = listItemView.findViewById(R.id.list_item_name);
+        // Get the Category Name from the current Category object and set this text on
+        // the categoryName TextView.
 
         categoryName.setText(currentCategory.getmCategoryName());
 
+        // Find the ImageView in the list_item.xml layout with the ID list_item_image
+        ImageView categoryImage = listItemView.findViewById(R.id.list_item_image);
 
-        // Find the ImageView in the list_item.xml layout with the ID image.
-        ImageView categoryImage = (ImageView) listItemView.findViewById(R.id.list_item_image);
-
-        // Get the Product Image Id from current Product object and set the image on
-        // the product_image ImageView.
+        // Get the Category image Id from current Category object and set the image on
+        // the categoryImage ImageView.
 
         categoryImage.setImageResource(currentCategory.getmCategoryImageId());
 

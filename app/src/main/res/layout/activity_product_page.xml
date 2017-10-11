@@ -15,7 +15,7 @@
             <TextView
                 android:id="@+id/product_name"
                 style="@style/ProductHeadline"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal" />
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/pager"
@@ -24,10 +24,10 @@
 
             <me.relex.circleindicator.CircleIndicator
                 android:id="@+id/indicator"
-                android:background="@color/appBackgroundColor"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:background="@color/appBackgroundColor" />
 
             <ImageView
                 android:id="@+id/product_image"
@@ -44,7 +44,7 @@
 
             <TextView
                 android:id="@+id/product_dimensions"
-                style="@style/ProductFeatures"/>
+                style="@style/ProductFeatures" />
 
             <TextView
                 android:id="@+id/colors_available_headline"
@@ -53,7 +53,7 @@
 
             <TextView
                 android:id="@+id/product_colors"
-                style="@style/ProductFeatures"/>
+                style="@style/ProductFeatures" />
 
             <TextView
                 style="@style/SubHeadline"
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorDeccanBlue"
                 android:padding="16dp"
-                android:text="@string/order_now"
+                android:text="@string/enquire_now"
                 android:textColor="@color/whiteText" />
 
         </LinearLayout>

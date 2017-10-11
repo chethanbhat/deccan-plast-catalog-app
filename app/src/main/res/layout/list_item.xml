@@ -12,7 +12,8 @@
         <ImageView
             android:id="@+id/list_item_image"
             style="@style/ImageStyle"
-            android:src="@drawable/furniture_solution"/>
+            android:src="@drawable/furniture_solution" />
+
         <TextView
             android:id="@+id/list_item_name"
             style="@style/CategoryText"

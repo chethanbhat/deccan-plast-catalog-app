@@ -17,13 +17,22 @@
     <string name="features">Key Features</string>
     <string name="colorsAvailable">Colors Available</string>
 
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_phone">Mobile Number (10 Digits only)</string>
+    <string name="customer_address">Address</string>
+    <string name="customer_city">City/Town</string>
+    <string name="customer_pincode">Pincode</string>
+
+    <string name="enquire_now">Enquire</string>
+    <string name="send_enquiry">Send Enquiry</string>
+
     <string name="name_error">Please enter a valid name</string>
     <string name="phone_error">Please enter a valid mobile number</string>
     <string name="address_error">Please enter a valid address</string>
     <string name="city_error">Please enter a valid city name</string>
     <string name="pincode_error">Please enter a valid pincode (6 Digits)</string>
 
-    <string name="colorCode">Code: \u2002</string>
+    <string name="colorCode">Color: \u2002</string>
 
     <string name="premium_relax_chairs_features">\u25CF Ergonomic \n\u25CF Extremely Comfortable Design \n\u25CF Higher seat height \n\u25CF Excellent support for lumber and neck \n\u25CF Ideal for leisure seating</string>
     <string name="premium_relax_chairs_dimensions">(H) 936 mm, (W) 615 mm, (D) 740 mm</string>

@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackgroundColor"
     tools:context="com.deccanplast.app.deccanplastindustries.MainActivity">
-<LinearLayout
-    style="@style/RootLinear">
 
-    <ImageView
-        style="@style/LogoStyle"
-        android:src="@drawable/logo"/>
-
-    <LinearLayout
-        android:id="@+id/furniture_category"
-        style="@style/CategoryStyle">
+    <LinearLayout style="@style/RootLinear">
 
         <ImageView
-            style="@style/ImageStyle"
-            android:src="@drawable/furniture_solution"/>
-        <TextView
-            style="@style/CategoryText"
-            android:text="@string/furniture_solutions" />
+            style="@style/LogoStyle"
+            android:src="@drawable/logo" />
 
+        <LinearLayout
+            android:id="@+id/furniture_category"
+            style="@style/CategoryStyle">
+
+            <ImageView
+                style="@style/ImageStyle"
+                android:src="@drawable/furniture_solution" />
+
+            <TextView
+                style="@style/CategoryText"
+                android:text="@string/furniture_solutions" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mhs_category"
+            style="@style/CategoryStyle">
+
+            <ImageView
+                style="@style/ImageStyle"
+                android:src="@drawable/mhs_solution" />
+
+            <TextView
+                style="@style/CategoryText"
+                android:text="@string/mhs_solution" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/mhs_category"
-        style="@style/CategoryStyle">
-
-        <ImageView
-            style="@style/ImageStyle"
-            android:src="@drawable/mhs_solution"/>
-
-        <TextView
-            style="@style/CategoryText"
-            android:text="@string/mhs_solution" />
-
-    </LinearLayout>
-</LinearLayout>
 
 </ScrollView>

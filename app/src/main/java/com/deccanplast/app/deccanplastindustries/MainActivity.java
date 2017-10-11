@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set a click listener on that View
         categoryMHS.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the Furniture View is clicked on.
+            // The code in this method will be executed when the MHS Solution View is clicked on.
             @Override
             public void onClick(View view) {
                 Intent mhsIntent = new Intent(MainActivity.this, MHSActivity.class);

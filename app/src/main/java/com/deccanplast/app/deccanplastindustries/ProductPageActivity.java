@@ -17,10 +17,9 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class ProductPageActivity extends AppCompatActivity {
 
-    private ViewPager mPager;
+    // Below are used only if timer is enabled for Product Image Sliders
     private int currentPage = 0;
     private ArrayList<Integer> imageArray = new ArrayList<>();
-    private String colorsAvailable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +32,15 @@ public class ProductPageActivity extends AppCompatActivity {
 
         setTitle(currentProduct.getmProductName());
 
-        final TextView productTitle = (TextView)findViewById(R.id.product_name);
+        final TextView productTitle = findViewById(R.id.product_name);
         productTitle.setText(currentProduct.getmProductName());
 
-        ImageView productImage = (ImageView)findViewById(R.id.product_image);
+        ImageView productImage = findViewById(R.id.product_image);
 
-        if(currentProduct.hasSlider()){
+        if (currentProduct.hasSlider()) {
             productImage.setVisibility(View.GONE);
-            init(currentProduct.getmProductSlider(),currentProduct.getmProductColors());
-        }else{
+            init(currentProduct.getmProductSlider(), currentProduct.getmProductColors());
+        } else {
             productImage.setImageResource(currentProduct.getmProductImageId());
             productImage.setVisibility(View.VISIBLE);
             findViewById(R.id.colors_available_headline).setVisibility(View.GONE);
@@ -50,25 +49,25 @@ public class ProductPageActivity extends AppCompatActivity {
             findViewById(R.id.indicator).setVisibility(View.GONE);
         }
 
-        TextView productPrice = (TextView)findViewById(R.id.product_price);
+        TextView productPrice = findViewById(R.id.product_price);
         productPrice.setText("Unit Price: ₹ " + currentProduct.getmProductCost() + "/-");
 
-        TextView productFeatures = (TextView)findViewById(R.id.product_features);
+        TextView productFeatures = findViewById(R.id.product_features);
         productFeatures.setText(currentProduct.getmProductFeatures());
 
-        TextView productDimensions = (TextView)findViewById(R.id.product_dimensions);
+        TextView productDimensions = findViewById(R.id.product_dimensions);
         productDimensions.setText(currentProduct.getmProductDimensions());
 
-        if(currentProduct.hasColors()){
-            TextView productColors = (TextView)findViewById(R.id.product_colors);
-            colorsAvailable = Arrays.toString(currentProduct.getmProductColors()).replaceAll("\\[|\\]|\\s", "");
-            productColors.setText(colorsAvailable.replaceAll(",",", "));
+        if (currentProduct.hasColors()) {
+            TextView productColors = findViewById(R.id.product_colors);
+            String colorsAvailable = Arrays.toString(currentProduct.getmProductColors()).replaceAll("\\[|\\]|\\s", "");
+            productColors.setText(colorsAvailable.replaceAll(",", ", "));
         }
 
-        TextView productRecommendation = (TextView)findViewById(R.id.product_recommendation);
+        TextView productRecommendation = findViewById(R.id.product_recommendation);
         productRecommendation.setText(currentProduct.getmProductRecommendations());
 
-        Button orderButton = (Button)findViewById(R.id.order_button);
+        Button orderButton = findViewById(R.id.order_button);
 
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +75,7 @@ public class ProductPageActivity extends AppCompatActivity {
                 Class activityClass = OrderActivity.class;
                 Intent activityIntent = new Intent(getApplicationContext(), activityClass);
                 activityIntent.putExtra("product", currentProduct);
-                activityIntent.putExtra("activityTitle","Order Now: " + currentProduct.getmProductName());
+                activityIntent.putExtra("activityTitle", "Send Enquiry: " + currentProduct.getmProductName());
                 startActivity(activityIntent);
             }
         });
@@ -84,9 +83,9 @@ public class ProductPageActivity extends AppCompatActivity {
 
     private void init(final int[] sliderImageResourceId, final String[] sliderProductColorId) {
 
-        mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new SliderAdapter(getApplicationContext(),sliderImageResourceId,sliderProductColorId));
-        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        ViewPager mPager = findViewById(R.id.pager);
+        mPager.setAdapter(new SliderAdapter(getApplicationContext(), sliderImageResourceId, sliderProductColorId));
+        CircleIndicator indicator = findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
 
@@ -109,6 +108,9 @@ public class ProductPageActivity extends AppCompatActivity {
 //        }, 5000, 5000);
     }
 
+    /**
+     * This method manages back button in the Toolbar / App Bar
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

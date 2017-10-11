@@ -4,12 +4,26 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by chethan on 14/7/17.
+ * Product Class represents various products under Furniture and MHS
+ * categories.
+ * <p>
+ * Each Product has Unique Code, Product Name, Product Cost, Product Image or Product Image Sliders,
+ * Product Features, Product Dimensions, Product Recommendations, Product Colors (Optional)
  */
 
 
 public class Product implements Parcelable {
 
+    // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
+    public static final Parcelable.Creator<Product> CREATOR = new Parcelable.Creator<Product>() {
+        public Product createFromParcel(Parcel in) {
+            return new Product(in);
+        }
+
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
     private int mProductCode;
     private int mProductImageId;
     private String mProductName;
@@ -20,24 +34,17 @@ public class Product implements Parcelable {
     private int[] mProductSlider;
     private String[] mProductColors;
 
-    public Product(){
+    public Product() {
 
     }
 
-    public Product(int productCode,String productName, int productImageId) {
+    public Product(int productCode, String productName, int productImageId) {
         this.mProductCode = productCode;
         this.mProductName = productName;
         this.mProductImageId = productImageId;
     }
 
-    public Product(int productCode,String productName, int productImageId, int productCost) {
-        this.mProductCode = productCode;
-        this.mProductName = productName;
-        this.mProductImageId = productImageId;
-        this.mProductCost = productCost;
-    }
-
-    public Product (Parcel parcel){
+    public Product(Parcel parcel) {
         this.mProductCode = parcel.readInt();
         this.mProductName = parcel.readString();
         this.mProductImageId = parcel.readInt();
@@ -66,39 +73,26 @@ public class Product implements Parcelable {
         out.writeString(mProductRecommendations);
         out.writeIntArray(mProductSlider);
         out.writeStringArray(mProductColors);
-
-
     }
-
-    // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
-    public static final Parcelable.Creator<Product> CREATOR = new Parcelable.Creator<Product>() {
-        public Product createFromParcel(Parcel in) {
-            return new Product(in);
-        }
-
-        public Product[] newArray(int size) {
-            return new Product[size];
-        }
-    };
 
     public int getmProductCode() {
         return mProductCode;
-    }
-
-    public int getmProductImageId() {
-        return mProductImageId;
-    }
-
-    public String getmProductName() {
-        return mProductName;
     }
 
     public void setmProductCode(int mProductCode) {
         this.mProductCode = mProductCode;
     }
 
+    public int getmProductImageId() {
+        return mProductImageId;
+    }
+
     public void setmProductImageId(int mProductImageId) {
         this.mProductImageId = mProductImageId;
+    }
+
+    public String getmProductName() {
+        return mProductName;
     }
 
     public void setmProductName(String mProductName) {
@@ -153,12 +147,11 @@ public class Product implements Parcelable {
         this.mProductColors = mProductColors;
     }
 
-    public boolean hasSlider(){
+    public boolean hasSlider() {
         return mProductSlider != null;
     }
 
-    public boolean hasColors(){
+    public boolean hasColors() {
         return mProductColors != null;
     }
-
 }

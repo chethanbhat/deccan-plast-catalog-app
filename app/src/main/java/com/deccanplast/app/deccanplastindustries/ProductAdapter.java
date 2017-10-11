@@ -11,7 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by chethan on 14/7/17.
+ * Product Adapter to generates products to be displayed
+ * in list view in corresponding furniture category
  */
 
 public class ProductAdapter extends ArrayAdapter<Product> {
@@ -19,7 +20,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
     /**
      * Create a new {@link ProductAdapter} object.
      *
-     * @param context is the current context (i.e. Activity) that the adapter is being created in.
+     * @param context  is the current context (i.e. Activity) that the adapter is being created in.
      * @param products is the list of {@link Product}s to be displayed.
      */
     public ProductAdapter(Context context, ArrayList<Product> products) {
@@ -29,10 +30,10 @@ public class ProductAdapter extends ArrayAdapter<Product> {
     /**
      * Provides a view for an AdapterView (ListView, GridView, etc.)
      *
-     * @param position The position in the list of data that should be displayed in the
-     *                 list item view.
+     * @param position    The position in the list of data that should be displayed in the
+     *                    list item view.
      * @param convertView The recycled view to populate.
-     * @param parent The parent ViewGroup that is used for inflation.
+     * @param parent      The parent ViewGroup that is used for inflation.
      * @return The View for the position in the AdapterView.
      */
 
@@ -48,7 +49,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         // Get the {@link Product} object located at this position in the list
         Product currentProduct = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
+        // Find the TextView in the list_item.xml layout with the id list_item_name
         TextView productName = listItemView.findViewById(R.id.list_item_name);
         // Get the Product Name from the current Product object and set this text on
         // the product_name TextView.
@@ -56,7 +57,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         productName.setText(currentProduct.getmProductName());
 
 
-        // Find the ImageView in the list_item.xml layout with the ID image.
+        // Find the ImageView in the list_item.xml layout with the id list_item_image
         ImageView productImage = listItemView.findViewById(R.id.list_item_image);
 
         // Get the Product Image Id from current Product object and set the image on
