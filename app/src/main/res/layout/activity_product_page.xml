@@ -17,7 +17,7 @@
                 style="@style/ProductHeadline"
                 android:gravity="center_horizontal" />
 
-            <android.support.v4.view.ViewPager
+            <com.deccanplast.app.deccanplastindustries.HackyViewPager
                 android:id="@+id/pager"
                 android:layout_width="match_parent"
                 android:layout_height="340dp" />
@@ -29,7 +29,7 @@
                 android:layout_marginBottom="16dp"
                 android:background="@color/appBackgroundColor" />
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/product_image"
                 style="@style/ImageStyle" />
 

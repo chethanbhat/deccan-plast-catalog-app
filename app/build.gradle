@@ -7,8 +7,8 @@ android {
         applicationId "com.deccanplast.app.deccanplastindustries"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 3
-        versionName "3.0"
+        versionCode 4
+        versionName "4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,4 +29,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'me.relex:circleindicator:1.2.2@aar'
     compile 'com.basgeekball:awesome-validation:2.0'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
 }

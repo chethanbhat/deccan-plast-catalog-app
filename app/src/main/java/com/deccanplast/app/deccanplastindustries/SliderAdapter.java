@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 /**
  * Product Slider for the Product Page
  */
@@ -46,9 +48,10 @@ public class SliderAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup view, int position) {
         View myImageLayout = mInflater.inflate(R.layout.slider, view, false);
-        ImageView myImage = myImageLayout
+        PhotoView myImage = myImageLayout
                 .findViewById(R.id.image);
         myImage.setImageResource(mSliderImageResourceId[position]);
+        myImage.setScaleType(ImageView.ScaleType.CENTER);
 
         if(mSliderProductColorId.length > 0){
             TextView colorCode = myImageLayout.findViewById(R.id.colorCode);

@@ -2,7 +2,6 @@ package com.deccanplast.app.deccanplastindustries;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -83,7 +82,7 @@ public class ProductPageActivity extends AppCompatActivity {
 
     private void init(final int[] sliderImageResourceId, final String[] sliderProductColorId) {
 
-        ViewPager mPager = findViewById(R.id.pager);
+        HackyViewPager mPager = findViewById(R.id.pager);
         mPager.setAdapter(new SliderAdapter(getApplicationContext(), sliderImageResourceId, sliderProductColorId));
         CircleIndicator indicator = findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
